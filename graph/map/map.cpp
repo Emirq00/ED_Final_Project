@@ -1,9 +1,8 @@
 #include <bits/stdc++.h>
+#include "map.hpp"
 using namespace std;
 
-unordered_map<string,int> m;
-
-int main() {
+void createMap() {
     // ruta 1
     m["Base Metro Universidad"] = 1;
     m["CENDI"] = 2;
@@ -239,6 +238,29 @@ int main() {
     //* m["Campos de futbol II"] = 54;
     
     // ruta 12
+    //* m["Base Estadio Olímpico"] = 63;
+    //* m["Psicología"] = 9;
+    //* m["Facultad de Filosofía"] = 10;
+    //* m["Facultad de Derecho"] = 11;
+    //* m["Facultad de Economía"]  = 12;
+    //* m["Facultad de Odontología"] = 13;
+    //* m["Facultad de Medicina"] = 14; 
+    //* m["Facultad de Química"]  = 4;
+    //* m["ENALLT Edif. A y B"]  = 5;
+    //* m["Facultad de Ingeniería"] = 6
+    //* m["Facultad de Arquitectura"]  = 7
+    //* m["Estacionamiento 8"] = 77;
+    //* m["Estacionamiento 7"] = 78;
+    //* m["Relaciones Laborales"] = 88;
+    //* m["Dirección General de Obras/Proveeduría"] = 89;
+    //* m["AAPAUNAM"] = 90;
+    m["Anexo de Filosofía"] = 92;
+    //* m["Estacionamiento 6"] = 79;
+    //* m["Estacionamiento 4"] = 80;
+    //* m["Estacionamiento 3"] = 81;
+    //* m["Estacionamiento 2"] = 82;
+    
+    // ruta 13
     //* m["Facultad de Filosofía"] = 10;
     //* m["Facultad de Derecho"] = 11; 
     //* m["Camino Verde"] = 75;
@@ -250,4 +272,3 @@ int main() {
     //* m["Base Metrobús CU II"] = 69;
     //* m["Estadio de Prácticas"] = 51;
 }
-

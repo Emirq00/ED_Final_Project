@@ -232,6 +232,29 @@
 //* m["Campos de futbol II"] = 54;
 
 ### RUTA 12 ###
+//* m["Base Estadio Olímpico"] = 63;
+//* m["Psicología"] = 9;
+//* m["Facultad de Filosofía"] = 10;
+//* m["Facultad de Derecho"] = 11;
+//* m["Facultad de Economía"]  = 12;
+//* m["Facultad de Odontología"] = 13;
+//* m["Facultad de Medicina"] = 14; 
+//* m["Facultad de Química"]  = 4;
+//* m["ENALLT Edif. A y B"]  = 5;
+//* m["Facultad de Ingeniería"] = 6
+//* m["Facultad de Arquitectura"]  = 7
+//* m["Estacionamiento 8"] = 77;
+//* m["Estacionamiento 7"] = 78;
+//* m["Relaciones Laborales"] = 88;
+//* m["Dirección General de Obras/Proveeduría"] = 89;
+//* m["AAPAUNAM"] = 90;
+["Anexo de Filosofía"] = 92;
+//* m["Estacionamiento 6"] = 79;
+//* m["Estacionamiento 4"] = 80;
+//* m["Estacionamiento 3"] = 81;
+//* m["Estacionamiento 2"] = 82;
+
+### RUTA 13 ###
 //* m["Facultad de Filosofía"] = 10;
 //* m["Facultad de Derecho"] = 11; 
 //* m["Camino Verde"] = 75;
@@ -241,17 +264,7 @@
 //* m["Facultad de Ciencias Políticas"] = 28;
 //* m["Investigaciones Jurídicas II"] = 29;
 //* m["Base Metrobús CU II"] = 69;
-//* m["Estadio de Prácticas"] = 51;
-
-### RUTA 13 ###
-6. Facultad de Filosofía (repetido: 6)  
-7. Facultad de Derecho (repetido: 7)  
-19. Estadio de Prácticas (repetido: 19)  
-35. Investigaciones Jurídicas 2 (repetido: 35)  
-46. Coordinación de Humanidades (repetido: 46)  
-34. Facultad de Ciencias Políticas (repetido: 34)  
-36. Biblioteca Nacional 2 (repetido: 36)  
-38. Unidad de Posgrado (repetido: 38)  
+//* m["Estadio de Prácticas"] = 51; 
 
 ===  
 **Total de paradas únicas: 93**
