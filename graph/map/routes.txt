@@ -1,4 +1,4 @@
-## RUTA 1
+RUTA 1
 Base Metro Universidad = 1
 CENDI = 2
 Psiquiatría y Salud Mental = 3
@@ -16,8 +16,8 @@ Facultad de Medicina = 14
 Facultad de Veterinaria  =15
 Instituto de Geofísica = 16
 Química Conjunto D y E = 17
-
-## RUTA 2
+    
+RUTA 2
 Base Metro Universidad = 1
 Química Conjunto D y E = 17
 Facultad de Ciencias Alumnos = 18
@@ -27,10 +27,10 @@ Escuela de Trabajo Social = 21
 Base Metrobús CU = 22
 Metrobús CU = 23
 Educación a Distancia = 24
-DGTC = 25
+DGTIC = 25
 Facultad de Ciencias = 26
-
-## RUTA 3
+    
+RUTA 3
 Base Metro Universidad = 1
 Química Conjunto D y E = 17
 Tienda UNAM II = 27
@@ -57,8 +57,8 @@ TV. UNAM = 47
 CUEC = 48
 DGSA = 49
 Tienda UNAM = 50
-
-## RUTA 4
+    
+RUTA 4
 Base Metro Universidad = 1
 Química Conjunto D y E = 17
 Facultad de Ciencias Alumnos = 18  
@@ -72,20 +72,20 @@ Jardín Botánico = 53
 Campos de futbol II = 54
 Metrobús CU = 23 
 Educación a Distancia = 24  
-DGTIC = 55
+DGTIC = 25
 Facultad de Ciencias = 26
-
-## RUTA 5
+    
+RUTA 5
 Base Metro Universidad = 1 
 CENDI = 2
 Psiquiatría y Salud Mental = 3
-Medicina = 56
-Odontología = 57
-Economía = 58
-Av. Universidad = 59
-Derecho = 60
-Filosofía = 61
-Facultad de Psicología = 62
+Medicina = 55
+Odontología = 56
+Economía = 57
+Av. Universidad = 58
+Derecho = 59
+Filosofía = 60
+Facultad de Psicología = 61
 Psicología = 9
 Facultad de Filosofía = 10
 Facultad de Derecho = 11
@@ -95,42 +95,42 @@ Facultad de Medicina = 14
 Facultad de Veterinaria  =15
 Instituto de Geofísica = 16
 Química Conjunto D y E = 17
-
-## RUTA 6
-Base Estadio Olímpico = 63
+    
+RUTA 6
+Base Estadio Olímpico = 62
 Campos de futbol I = 52
-Pumitas I = 64
-Pista de calentamiento I = 65
-Pista de calentamiento II = 66
-Pumitas II = 67
-##* Jardín Botánico = 53
-##* Campos de futbol II = 54
-Investigaciones Biomédicas = 68
-Base Metrobús CU II = 69
+Pumitas I = 63
+Pista de calentamiento I = 64
+Pista de calentamiento II = 65
+Pumitas II = 66
+Jardín Botánico = 53
+Campos de futbol II = 54
+Investigaciones Biomédicas = 67
+Base Metrobús CU II = 68
 Metrobús CU = 23
 Educación a Distancia = 24
-DGTC = 25
-Facultad de Ciencias Profesores = 70
-Investigación Científica = 71
-Ciencias del Mar = 72
-Invernadero = 73
-Anexo de Ingeniería = 74
-Camino Verde = 75
+DGTIC = 25
+Facultad de Ciencias Profesores = 69
+Investigación Científica = 70
+Ciencias del Mar = 71
+Invernadero = 72
+Anexo de Ingeniería = 73
+Camino Verde = 74
 Facultad de Contaduría y Administración = 20
 Escuela de Trabajo Social = 21  
 Base Metrobús CU = 22
 Estadio de Prácticas = 51
-MUCA = 76
-Estacionamiento 8 = 77
-Estacionamiento 7 = 78
-Estacionamiento 6 = 79
-Estacionamiento 5 = 80
-Estacionamiento 4 = 81
-Estacionamiento 3 = 82
-Estacionamiento 2 = 83
-
-## RUTA 7
-Base Estadio Olímpico = 63
+MUCA = 75
+Estacionamiento 8 = 76
+Estacionamiento 7 = 77
+Estacionamiento 6 = 78
+Estacionamiento 5 = 79
+Estacionamiento 4 = 80
+Estacionamiento 3 = 81
+Estacionamiento 2 = 82
+    
+RUTA 7
+Base Estadio Olímpico = 62
 Psicología = 9
 Facultad de Filosofía = 10
 Facultad de Derecho = 11
@@ -141,39 +141,39 @@ Facultad de Química  = 4
 ENALLT Edif. A y B  = 5
 Facultad de Ingeniería = 6
 Facultad de Arquitectura  = 7
-Estacionamiento 8 = 77
-Estacionamiento 7 = 78
-Estacionamiento 6 = 79
-Estacionamiento 4 = 80
-Estacionamiento 3 = 81
-Estacionamiento 2 = 82
-
-## RUTA 8
-Base Estadio Olímpico = 63  
-Centro Médico = 84
-Alberca = 85
-Ingeniería = 86
-Frontones = 87
-IIMAS = 88
-Invernadero = 73
-Anexo de Ingeniería = 74
-Camino Verde = 75
+Estacionamiento 8 = 76
+Estacionamiento 7 = 77
+Estacionamiento 6 = 78
+Estacionamiento 4 = 79
+Estacionamiento 3 = 80
+Estacionamiento 2 = 81
+    
+RUTA 8
+Base Estadio Olímpico = 62  
+Centro Médico = 83
+Alberca = 84
+Ingeniería = 85
+Frontones = 86
+IIMAS = 87
+Invernadero = 72
+Anexo de Ingeniería = 73
+Camino Verde = 74
 Facultad de Contaduría y Administración = 20
 Escuela de Trabajo Social = 21  
 Base Metrobús CU = 22
 Estadio de Prácticas = 51
-MUCA = 76
-Estacionamiento 8 = 77
-Estacionamiento 7 = 78
-Estacionamiento 6 = 79
-Estacionamiento 4 = 80
-Estacionamiento 3 = 81
-Estacionamiento 2 = 82
-
-## RUTA 9
+MUCA = 75
+Estacionamiento 8 = 76
+Estacionamiento 7 = 77
+Estacionamiento 6 = 78
+Estacionamiento 4 = 79
+Estacionamiento 3 = 80
+Estacionamiento 2 = 81
+    
+RUTA 9
 Base Metrobús CU = 22
 Estadio de Prácticas = 51
-MUCA = 76
+MUCA = 75
 Rectoría = 8
 Psicología = 9
 Facultad de Filosofía = 10
@@ -181,18 +181,18 @@ Facultad de Derecho = 11
 Facultad de Economía  = 12
 Facultad de Odontología = 13
 Facultad de Medicina = 14
-Invernadero = 73
-Anexo de Ingeniería = 74
-Camino Verde = 75
+Invernadero = 72
+Anexo de Ingeniería = 73
+Camino Verde = 74
 Facultad de Contaduría y Administración = 20
 Escuela de Trabajo Social = 21
-
-## RUTA 10
-Base Metrobús CU II = 69
+    
+RUTA 10
+Base Metrobús CU II = 68
 Campos de futbol I = 52
-##* Jardín Botánico = 53
-##* Campos de futbol II = 54
-Investigaciones Biomédicas = 68
+Jardín Botánico = 53
+Campos de futbol II = 54
+Investigaciones Biomédicas = 67
 Biblioteca Nacional II = 30
 Zona Cultural = 31
 Unidad de Posgrado = 32
@@ -216,24 +216,24 @@ DGSA = 49
 Tienda UNAM II = 27
 Facultad de Ciencias Políticas = 28
 Investigaciones Jurídicas II = 29
-
-## RUTA 11
+    
+RUTA 11
 Base Metrobús CU = 22
 Estadio de Prácticas = 51
-MUCA = 76
-Estacionamiento 8 = 77
-Estacionamiento 7 = 78
-Relaciones Laborales = 89
-Dirección General de Obras/Proveeduría = 90
-AAPAUNAM = 91
-Posgrado de Filosofía = 92
-Pista de calentamiento II = 66
-Pumitas II = 67
+MUCA = 75
+Estacionamiento 8 = 76
+Estacionamiento 7 = 77
+Relaciones Laborales = 88
+Dirección General de Obras/Proveeduría = 89
+AAPAUNAM = 90
+Posgrado de Filosofía = 91
+Pista de calentamiento II = 65
+Pumitas II = 66
 Jardín Botánico = 53
 Campos de futbol II = 54
-
-## RUTA 12
-Base Estadio Olímpico = 63
+    
+RUTA 12
+Base Estadio Olímpico = 62
 Psicología = 9
 Facultad de Filosofía = 10
 Facultad de Derecho = 11
@@ -244,27 +244,25 @@ Facultad de Química  = 4
 ENALLT Edif. A y B  = 5
 Facultad de Ingeniería = 6
 Facultad de Arquitectura  = 7
-Estacionamiento 8 = 77
-Estacionamiento 7 = 78
-Relaciones Laborales = 88
-Dirección General de Obras/Proveeduría = 89
-AAPAUNAM = 90
-Anexo de Filosofía = 93
-Estacionamiento 6 = 79
-Estacionamiento 4 = 80
-Estacionamiento 3 = 81
-Estacionamiento 2 = 82
-
-## RUTA 13
+Estacionamiento 8 = 76
+Estacionamiento 7 = 77
+Relaciones Laborales = 87
+Dirección General de Obras/Proveeduría = 88
+AAPAUNAM = 89
+Anexo de Filosofía = 92
+Estacionamiento 6 = 78
+Estacionamiento 4 = 79
+Estacionamiento 3 = 80
+Estacionamiento 2 = 81
+    
+RUTA 13
 Facultad de Filosofía = 10
 Facultad de Derecho = 11 
-Camino Verde = 75
+Camino Verde = 74
 Biblioteca Nacional II = 30
 Unidad de Posgrado = 32
 Coordinación de Humanidades = 40
 Facultad de Ciencias Políticas = 28
 Investigaciones Jurídicas II = 29
-Base Metrobús CU II = 69
+Base Metrobús CU II = 68
 Estadio de Prácticas = 51
-
-## TOTAL DE RUTAS ÚNICAS ENCONTRADAS: 93
