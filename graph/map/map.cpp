@@ -2,6 +2,8 @@
 #include "map.hpp"
 using namespace std;
 
+unordered_map<string,int> m;
+
 void createMap() {
     // ruta 1
     m["Base Metro Universidad"] = 1;
@@ -38,10 +40,10 @@ void createMap() {
     // ruta 3
     //* m["Base Metro Universidad"] = 1;
     //* m["Química Conjunto D y E"] = 17;
-    m["Tienda UNAM 2"] = 27;
+    m["Tienda UNAM II"] = 27;
     m["Facultad de Ciencias Políticas"] = 28;
-    m["Investigaciones Jurídicas 2"] = 29;
-    m["Biblioteca Nacional 2"] = 30;
+    m["Investigaciones Jurídicas II"] = 29;
+    m["Biblioteca Nacional II"] = 30;
     m["Zona Cultural"] = 31;
     m["Unidad de Posgrado"] = 32;
     m["Posgrado de Economía"] = 33;
@@ -111,10 +113,10 @@ void createMap() {
     //* ["Jardín Botánico"] = 53;
     //* ["Campos de futbol II"] = 54;
     m["Investigaciones Biomédicas"] = 68;
-    m["Metrobús CU II"] = 69;
+    m["Base Metrobús CU II"] = 69;
     //* m["Metrobús CU"] = 23;
-    //* ["Educación a Distancia"] = 24;
-    //* ["DGTC"] = 25;
+    //* m["Educación a Distancia"] = 24;
+    //* m["DGTC"] = 25;
     m["Facultad de Ciencias Profesores"] = 70;
     m["Investigación Científica"] = 71;
     m["Ciencias del Mar"] = 72;
@@ -144,8 +146,8 @@ void createMap() {
     //* m["Facultad de Medicina"] = 14; 
     //* m["Facultad de Química"]  = 4;
     //* m["ENALLT Edif. A y B"]  = 5;
-    //* m["Facultad de Ingeniería"] = 6
-    //* m["Facultad de Arquitectura"]  = 7
+    //* m["Facultad de Ingeniería"] = 6;
+    //* m["Facultad de Arquitectura"]  = 7;
     //* m["Estacionamiento 8"] = 77;
     //* m["Estacionamiento 7"] = 78;
     //* m["Estacionamiento 6"] = 79;
@@ -155,11 +157,11 @@ void createMap() {
     
     // ruta 8;
     //* m["Base Estadio Olímpico"] = 63;  
-    m["Centro Médico"] = 83;
-    m["Alberca"] = 84;
-    m["Ingeniería"] = 85;
-    m["Frontones"] = 86;
-    m["IIMAS"] = 87;
+    m["Centro Médico"] = 84;
+    m["Alberca"] = 85;
+    m["Ingeniería"] = 86;
+    m["Frontones"] = 87;
+    m["IIMAS"] = 88;
     //* m["Invernadero"] = 73;
     //* m["Anexo de Ingeniería"] = 74;
     //* m["Camino Verde"] = 75;
@@ -228,10 +230,10 @@ void createMap() {
     //* m["MUCA"] = 76;
     //* m["Estacionamiento 8"] = 77;
     //* m["Estacionamiento 7"] = 78;
-    m["Relaciones Laborales"] = 88;
-    m["Dirección General de Obras/Proveeduría"] = 89;
-    m["AAPAUNAM"] = 90;
-    m["Posgrado de Filosofía"] = 91;
+    m["Relaciones Laborales"] = 89;
+    m["Dirección General de Obras/Proveeduría"] = 90;
+    m["AAPAUNAM"] = 91;
+    m["Posgrado de Filosofía"] = 92;
     //* m["Pista de calentamiento II"] = 66;
     //* m["Pumitas II"] = 67;
     //* m["Jardín Botánico"] = 53;
@@ -254,7 +256,7 @@ void createMap() {
     //* m["Relaciones Laborales"] = 88;
     //* m["Dirección General de Obras/Proveeduría"] = 89;
     //* m["AAPAUNAM"] = 90;
-    m["Anexo de Filosofía"] = 92;
+    m["Anexo de Filosofía"] = 93;
     //* m["Estacionamiento 6"] = 79;
     //* m["Estacionamiento 4"] = 80;
     //* m["Estacionamiento 3"] = 81;
