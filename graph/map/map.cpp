@@ -2,111 +2,110 @@
 #include "data.hpp"
 using namespace std;
 
-unordered_map<string,int> m;
 
 void createMap() {
     // ruta 1
-    m["Base Metro Universidad"] = 1;
-    m["CENDI"] = 2;
-    m["Psiquiatría y Salud Mental"] = 3;
-    m["Facultad de Química"]  = 4;
-    m["ENALLT Edif. A y B"]  = 5;
-    m["Facultad de Ingeniería"] = 6;
-    m["Facultad de Arquitectura"]  = 7;
-    m["Rectoría"] = 8;
-    m["Psicología"] = 9;
-    m["Facultad de Filosofía"] = 10;
-    m["Facultad de Derecho"] = 11;
-    m["Facultad de Economía"]  = 12;
-    m["Facultad de Odontología"] = 13;
-    m["Facultad de Medicina"] = 14;
-    m["Facultad de Veterinaria"]  =15;
-    m["Instituto de Geofísica"] = 16;
-    m["Química Conjunto D y E"] = 17;
+    m["base_metro_universidad"] = 1;
+    m["cendi"] = 2;
+    m["psiquiatria_y_salud_mental"] = 3;
+    m["facultad_de_quimica"]  = 4;
+    m["enallt_edif_a_y_b"]  = 5;
+    m["facultad_de_ingenieria"] = 6;
+    m["facultad_de_arquitectura"]  = 7;
+    m["rectoria"] = 8;
+    m["psicologia"] = 9;
+    m["facultad_de_filosofia"] = 10;
+    m["facultad_de_derecho"] = 11;
+    m["facultad_de_economia"]  = 12;
+    m["facultad_de_odontologia"] = 13;
+    m["facultad_de_medicina"] = 14;
+    m["facultad_de_veterinaria"]  =15;
+    m["instituto_de_geofisica"] = 16;
+    m["quimica_conjunto_d_y_e"] = 17;
     
     // ruta 2
-    m["Facultad de Ciencias Alumnos"] = 18;
-    m["Facultad de Ciencias Camino Verde"] = 19;
-    m["Facultad de Contaduría y Administración"] = 20;
-    m["Escuela de Trabajo Social"] = 21;
-    m["Base Metrobús CU"] = 22;
-    m["Metrobús CU"] = 23;
-    m["Educación a Distancia"] = 24;
-    m["DGTIC"] = 25;
-    m["Facultad de Ciencias"] = 26;
+    m["facultad_de_ciencias_alumnos"] = 18;
+    m["facultad_de_ciencias_camino_verde"] = 19;
+    m["facultad_de_contaduria_y_administracion"] = 20;
+    m["escuela_de_trabajo_social"] = 21;
+    m["base_metrobus_cu"] = 22;
+    m["metrobus_cu"] = 23;
+    m["educacion_a_distancia"] = 24;
+    m["dgtic"] = 25;
+    m["facultad_de_ciencias"] = 26;
     
     // ruta 3
-    m["Tienda UNAM II"] = 27;
-    m["Facultad de Ciencias Políticas"] = 28;
-    m["Investigaciones Jurídicas II"] = 29;
-    m["Biblioteca Nacional II"] = 30;
-    m["Zona Cultural"] = 31;
-    m["Unidad de Posgrado"] = 32;
-    m["Posgrado de Economía"] = 33;
-    m["DGIRE"] = 34;
-    m["DGAPA"] = 35;
-    m["Archivo General"] = 36;
-    m["Avenida IMAN"] = 37;
-    m["Investigaciones Filosóficas"] = 38;
-    m["Investigaciones Filológicas"] = 39;
-    m["Coordinación de Humanidades"] = 40;
-    m["UNIVERSUM"] = 41;
-    m["Teatro y Danza"] = 42;
-    m["MUAC"] = 43;
-    m["Biblioteca Nacional"] = 44;
-    m["Espacio Escultórico"] = 45;
-    m["Investigaciones Jurídicas"] = 46;
-    m["TV. UNAM"] = 47;
-    m["CUEC"] = 48;
-    m["DGSA"] = 49;
-    m["Tienda UNAM"] = 50;
+    m["tienda_unam_ii"] = 27;
+    m["facultad_de_ciencias_politicas"] = 28;
+    m["investigaciones_juridicas_ii"] = 29;
+    m["biblioteca_nacional_ii"] = 30;
+    m["zona_cultural"] = 31;
+    m["unidad_de_posgrado"] = 32;
+    m["posgrado_de_economia"] = 33;
+    m["dgire"] = 34;
+    m["dgapa"] = 35;
+    m["archivo_general"] = 36;
+    m["avenida_iman"] = 37;
+    m["investigaciones_filosoficas"] = 38;
+    m["investigaciones_filologicas"] = 39;
+    m["coordinacion_de_humanidades"] = 40;
+    m["universum"] = 41;
+    m["teatro_y_danza"] = 42;
+    m["muac"] = 43;
+    m["biblioteca_nacional"] = 44;
+    m["espacio_escultorico"] = 45;
+    m["investigaciones_juridicas"] = 46;
+    m["tv_unam"] = 47;
+    m["cuec"] = 48;
+    m["dgsa"] = 49;
+    m["tienda_unam"] = 50;
     
     // ruta 4
-    m["Estadio de Prácticas"] = 51;
-    m["Campos de futbol I"] = 52;
-    m["Jardín Botánico"] = 53;
-    m["Campos de futbol II"] = 54;
+    m["estadio_de_practicas"] = 51;
+    m["campos_de_futbol_i"] = 52;
+    m["jardin_botanico"] = 53;
+    m["campos_de_futbol_ii"] = 54;
     
     // ruta 5
-    m["Medicina"] = 55;
-    m["Odontología"] = 56;
-    m["Economía"] = 57;
-    m["Av. Universidad"] = 58;
-    m["Derecho"] = 59;
-    m["Filosofía"] = 60;
-    m["Facultad de Psicología"] = 61;
+    m["medicina"] = 55;
+    m["odontologia"] = 56;
+    m["economia"] = 57;
+    m["av_universidad"] = 58;
+    m["derecho"] = 59;
+    m["filosofia"] = 60;
+    m["facultad_de_psicologia"] = 61;
     
     // ruta 6
-    m["Base Estadio Olímpico"] = 62;
-    m["Pumitas I"] = 63;
-    m["Pista de calentamiento I"] = 64;
-    m["Pista de calentamiento II"] = 65;
-    m["Pumitas II"] = 66;
-    m["Investigaciones Biomédicas"] = 67;
-    m["Base Metrobús CU II"] = 68;
-    m["Facultad de Ciencias Profesores"] = 69;
-    m["Investigación Científica"] = 70;
-    m["Ciencias del Mar"] = 71;
-    m["Invernadero"] = 72;
-    m["Anexo de Ingeniería"] = 73;
-    m["Camino Verde"] = 74;
-    m["MUCA"] = 75;
-    m["Estacionamiento 8"] = 76;
-    m["Estacionamiento 7"] = 77;
-    m["Estacionamiento 6"] = 78;
-    m["Estacionamiento 4"] = 79;
-    m["Estacionamiento 3"] = 80;
-    m["Estacionamiento 2"] = 81;
+    m["base_estadio_olimpico"] = 62;
+    m["pumitas_i"] = 63;
+    m["pista_de_calentamiento_i"] = 64;
+    m["pista_de_calentamiento_ii"] = 65;
+    m["pumitas_ii"] = 66;
+    m["investigaciones_biomedicas"] = 67;
+    m["base_metrobus_cu_ii"] = 68;
+    m["facultad_de_ciencias_profesores"] = 69;
+    m["investigacion_cientifica"] = 70;
+    m["ciencias_del_mar"] = 71;
+    m["invernadero"] = 72;
+    m["anexo_de_ingenieria"] = 73;
+    m["camino_verde"] = 74;
+    m["muca"] = 75;
+    m["estacionamiento_8"] = 76;
+    m["estacionamiento_7"] = 77;
+    m["estacionamiento_6"] = 78;
+    m["estacionamiento_4"] = 79;
+    m["estacionamiento_3"] = 80;
+    m["estacionamiento_2"] = 81;
     
     // ruta 7
     //* repetidas
     
     // ruta 8;  
-    m["Centro Médico"] = 82;
-    m["Alberca"] = 83;
-    m["Ingeniería"] = 84;
-    m["Frontones"] = 85;
-    m["IIMAS"] = 86;
+    m["centro_medico"] = 82;
+    m["alberca"] = 83;
+    m["ingenieria"] = 84;
+    m["frontones"] = 85;
+    m["iimas"] = 86;
     
     // ruta 9
     //* repetidas
@@ -115,13 +114,13 @@ void createMap() {
     //* repetidas
     
     // ruta 11
-    m["Relaciones Laborales"] = 87;
-    m["Dirección General de Obras/Proveeduría"] = 87;
-    m["AAPAUNAM"] = 89;
-    m["Posgrado de Filosofía"] = 90;
+    m["relaciones_laborales"] = 87;
+    m["direccion_general_de_obras/proveeduria"] = 88;
+    m["aapaunam"] = 89;
+    m["posgrado_de_filosofia"] = 90;
     
     // ruta 12
-    m["Anexo de Filosofía"] = 91;
+    m["anexo_de_filosofia"] = 91;
     
     // ruta 13
     //* repetidas

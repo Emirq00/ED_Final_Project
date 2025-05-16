@@ -1,10 +1,10 @@
-#pragma once
 #include <bits/stdc++.h>
+#include "data.hpp"
 using namespace std;
 
-extern unordered_map<string,int> m;
-extern vector<vector<pair<int,int>>> adj;
-extern vector<vector<int>> shortest_routes;
+unordered_map<string,int> m;
+vector<vector<pair<int,int>>> adj(92);
+vector<vector<int>> shortest_routes(92);
 
 void createMap();
 void createGraph();
