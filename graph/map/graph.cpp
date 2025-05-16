@@ -75,4 +75,33 @@ void createGraph() {
     adj[ m["Base Estadio Olímpico"] ] = {{m["Campos de futbol I"], 1400}, {m["Psicología"], 470}, {m["Centro Médico"], 1350}};
     adj[ m["Pumitas I"] ] = {{m["Pista de calentamiento I"], 197}};
     adj[ m["Pista de calentamiento I"] ] = {{m["Pista de calentamiento II"], 215}};
+    adj[ m["Pista de calentamiento II"] ] = {{m["Pumitas II"], 210}};
+    adj[ m["Pumitas II"] ] = {{m["Jardín Botánico"], 490}};
+    adj[ m["Investigaciones Biomédicas"] ] = {{m["Base Metrobús CU II"], 240}, {m["Biblioteca Nacional II"], 1100}};
+    adj[ m["Base Metrobús CU II"] ] = {{m["Metrobús CU"], 500}, {m["Campos de futbol I"], 650}, {m["Estadio de Prácticas"], 550}};
+    adj[ m["Facultad de Ciencias Profesores"] ] = {{m["Investigación Científica"], 220}};
+    adj[ m["Investigación Científica"] ] = {{m["Ciencias del Mar"], 280}};
+    adj[ m["Ciencias del Mar"] ] = {{m["Invernadero"], 260}};
+    adj[ m["Invernadero"] ] = {{m["Anexo de Ingeniería"], 250}};
+    adj[ m["Anexo de Ingeniería"] ] = {{m["Camino Verde"], 180}};
+    adj[ m["Camino Verde"] ] = {{m["Facultad de Contaduría y Administración"], 400}, {m["Biblioteca Nacional II"], 3100}};
+    adj[ m["MUCA"] ] = {{m["Estacionamiento 8"], 500}, {m["Rectoría"], 290}};
+    adj[ m["Estacionamiento 8"] ] = {{m["Estacionamiento 7"], 240}};
+    adj[ m["Estacionamiento 7"] ] = {{m["Estacionamiento 6"], 240}, {m["Relaciones Laborales"], 1000}};
+    adj[ m["Estacionamiento 6"] ] = {{m["Estacionamiento 4"], 140}};
+    adj[ m["Estacionamiento 4"] ] = {{m["Estacionamiento 3"], 250}};
+    adj[ m["Estacionamiento 3"] ] = {{m["Estacionamiento 2"], 280}};
+    adj[ m["Estacionamiento 2"] ] = {{m["Base Estadio Olímpico"], 270}};
+    
+    adj[ m["Centro Médico"] ] = {{m["Alberca"], 160}};
+    adj[ m["Alberca"] ] = {{m["Ingeniería"], 180}};
+    adj[ m["Ingeniería"] ] = {{m["Frontones"], 170}};
+    adj[ m["Frontones"] ] = {{m["IIMAS"], 240}};
+    adj[ m["IIMAS"] ] = {{m["Invernadero"], 280}};
+    
+    adj[ m["Relaciones Laborales"] ] = {{m["Dirección General de Obras/Proveeduría"], 260}};
+    adj[ m["Dirección General de Obras/Proveeduría"] ] = {{m["AAPAUNAM"], 270}};
+    adj[ m["AAPAUNAM"] ] = {{m["Posgrado de Filosofía"], 250}, {m["Anexo de Filosofía"], 250}};
+    adj[ m["Posgrado de Filosofía"] ] = {{m["Pista de calentamiento II"], 750}};
+    adj[ m["Anexo de Filosofía"] ] = {{m["Estacionamiento 6"], 850}};
 }
