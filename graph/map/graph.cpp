@@ -33,4 +33,46 @@ void createGraph() {
     adj[ m["Educación a Distancia"] ] = {{m["DGTIC"], 234}};
     adj[ m["DGTIC"] ] = {{m["Facultad de Ciencias"], 634}, {m["Facultad de Ciencias Profesores"], 396}};
     adj[ m["Facultad de Ciencias"] ] = {{m["Base Metro Universidad"], 577}};
+    
+    adj[ m["Tienda UNAM II"] ] = {{m["Facultad de Ciencias Políticas"], 283}};
+    adj[ m["Facultad de Ciencias Políticas"] ] = {{m["Investigaciones Jurídicas II"], 477}};
+    adj[ m["Investigaciones Jurídicas II"] ] = {{m["Biblioteca Nacional II"], 877}, {m["Base Metrobús CU II"], 1400}};
+    adj[ m["Biblioteca Nacional II"] ] = {{m["Zona Cultural"], 92}, {m["Unidad de Posgrado"], 1220}};
+    adj[ m["Zona Cultural"] ] = {{m["Unidad de Posgrado"], 1130}};
+    adj[ m["Unidad de Posgrado"] ] = {{m["Posgrado de Economía"], 316}, {m["Coordinación de Humanidades"], 1400}};
+    adj[ m["Posgrado de Economía"] ] = {{m["DGIRE"], 111}};
+    adj[ m["DGIRE"] ] = {{m["DGAPA"], 310}};
+    adj[ m["DGAPA"] ] = {{m["Archivo General"], 222}};
+    adj[ m["Archivo General"] ] = {{m["Avenida IMAN"], 210}};
+    adj[ m["Avenida IMAN"] ] = {{m["Investigaciones Filosóficas"], 805}};
+    adj[ m["Investigaciones Filosóficas"] ] = {{m["Investigaciones Filológicas"], 100}};
+    adj[ m["Investigaciones Filológicas"] ] = {{m["Coordinación de Humanidades"], 46}};
+    adj[ m["Coordinación de Humanidades"] ] = {{m["UNIVERSUM"], 349}, {m["Facultad de Ciencias Políticas"], 1470}};
+    adj[ m["UNIVERSUM"] ] = {{m["Teatro y Danza"], 355}};
+    adj[ m["Teatro y Danza"] ] = {{m["MUAC"], 373}};
+    adj[ m["MUAC"] ] = {{m["Biblioteca Nacional"], 135}};
+    adj[ m["Biblioteca Nacional"] ] = {{m["Espacio Escultórico"], 472}};
+    adj[ m["Espacio Escultórico"] ] = {{m["Investigaciones Jurídicas"], 333}};
+    adj[ m["Investigaciones Jurídicas"] ] = {{m["TV. UNAM"], 456}};
+    adj[ m["TV. UNAM"] ] = {{m["CUEC"], 155}};
+    adj[ m["CUEC"] ] = {{m["DGSA"], 169}};
+    adj[ m["DGSA"] ] = {{m["Tienda UNAM"], 101}, {m["Tienda UNAM II"], 323}};
+    adj[ m["Tienda UNAM"] ] = {{m["Base Metro Universidad"], 383}};
+    
+    adj[ m["Estadio de Prácticas"] ] = {{m["Campos de futbol I"], 732}, {m["MUCA"], 392}, {m["Facultad de Filosofía"], 1060}};
+    adj[ m["Campos de futbol I"] ] = {{m["Jardín Botánico"], 670}, {m["Pumitas I"], 532}};
+    adj[ m["Jardín Botánico"] ] = {{m["Campos de futbol II"], 238}};
+    adj[ m["Campos de futbol II"] ] = {{m["Metrobús CU"], 652}, {m["Investigaciones Biomédicas"], 403}, {m["Base Metrobús CU"], 866}};
+    
+    adj[ m["Medicina"]  ] = {{m["Odontología"], 108}};
+    adj[ m["Odontología"] ] = {{m["Economía"],  241}};
+    adj[ m["Economía"] ] = {{m["Av. Universidad"], 314}};
+    adj[ m["Av. Universidad"] ] = {{m["Derecho"], 324}};
+    adj[ m["Derecho"] ] = {{m["Filosofía"], 265}};
+    adj[ m["Filosofía"] ] = {{m["Facultad de Psicología"], 205}};
+    adj[ m["Facultad de Psicología"] ] = {{m["Psicología"], 87}};
+    
+    adj[ m["Base Estadio Olímpico"] ] = {{m["Campos de futbol I"], 1400}, {m["Psicología"], 470}, {m["Centro Médico"], 1350}};
+    adj[ m["Pumitas I"] ] = {{m["Pista de calentamiento I"], 197}};
+    adj[ m["Pista de calentamiento I"] ] = {{m["Pista de calentamiento II"], 215}};
 }
