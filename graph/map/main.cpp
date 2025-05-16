@@ -30,5 +30,10 @@ int main() {
             }
         }
     }
+    cout << "\nLa distancia recorrida entre " << station << " y " << station2 << " es: " << dist[m[station2]] << "[m]\n";
+    double vprom = 13; // [km/h]
+    double time = (dist[m[station2]]/1000)/vprom; // [h]
+    time *= 60;
+    cout << "Tiempo aproximado de llegada: " << time << "[min]\n";
     return 0;
 }
