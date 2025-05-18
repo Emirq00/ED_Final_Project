@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa Interactivo CU UNAM</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"/>
+    <style>
+        :root{
+            --unam-blue: #004a8d;
+            --unam-gold: #d4af37;
+            --dark-bg: #1a1a1a;
+            --light-bg: #f0f0f0;
+        }
+        body{
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            transition: all 0.3s;
+        }
+        body.dark-mode{
+            background: linear-gradient(135deg, var(--dark-bg) 0%, #0a192f 100%);
+            color: white;
+        }
+        body.light-mode{
+            background: linear-gradient(135deg, var(--light-bg) 0%, #d4e3ff 100%);
+            color: #333;
+        }
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            position: relative;
+        }
+        #inicioBtn{
+            padding: 20px 40px;
+            font-size: 1.5em;
+            background: rgba(0, 74, 141, 0.2);
+            border: 3px solid var(--unam-blue);
+            color: var(--unam-blue);
+            border-radius: 15px;
+            cursor: pointer;
+            transition: all 0.3s;
+            backdrop-filter: blur(5px);
+            box-shadow: 0 0 25px rgba(0, 74, 141, 0.3);
+            animation: aparecer 1s ease-out;
+        }
+        @keyframes aparecer{
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+        #inicioBtn:hover{
+            background: rgba(0, 74, 141, 0.4);
+            transform: scale(1.05);
+            box-shadow: 0 0 35px rgba(0, 74, 141, 0.5);
+        }
+        #mapContainer{
+            width: 100vw;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            display: none;
+        }
+        #map{
+            width: 100%;
+            height: 100%;
+        }
+        .map-controls{
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1000;
+        }
+        .search-container{
+            width: 50px;
+            height: 50px;
+            overflow: hidden;
+            transition: all 0.3s;
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 30px;
+            display: flex;
+            align-items: center;
+            backdrop-filter: blur(5px);
+        }
+        .search-container.active{
+            width: 500px;
+            padding: 0 20px;
+        }
+        .search-trigger{
+            width: 50px;
+            height: 50px;
+            border: none;
+            background: none;
+            color: white;
+            cursor: pointer;
+            font-size: 1.5em;
+            flex-shrink: 0;
+        }
+        .search-content{
+            display: none;
+            width: 100%;
+            gap: 15px;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .search-container.active .search-content{
+            display: flex;
+        }
+        .search-input-group{
+            flex: 1;
+            display: flex;
+            gap: 10px;
+        }
+        .search-input{
+            flex: 1;
+            padding: 10px;
+            border: none;
+            background: transparent;
+            color: white;
+            border-bottom: 2px solid var(--unam-blue);
+            font-size: 1em;
+        }
+        .search-input::placeholder{
+            color: rgba(255, 255, 255, 0.7);
+        }
+        .search-action{
+            width: 80px;
+            height: 40px;
+            background: var(--unam-blue);
+            border: none;
+            color: white;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 1em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .light-mode .search-action{
+            background: #0066cc;
+        }
+        .theme-toggle{
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+            z-index: 1001;
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px solid var(--unam-blue);
+            backdrop-filter: blur(5px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5em;
+            animation: flotar 3s ease-in-out infinite;
+        }
+        @keyframes flotar{
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-5px); }
+        }
+        .close-btn{
+            position: fixed;
+            bottom: 20px;
+            right: 90px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+            z-index: 1001;
+            background: rgba(255, 0, 0, 0.1);
+            border: 2px solid #cc0000;
+            color: #cc0000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2em;
+            backdrop-filter: blur(5px);
+        }
+        .dark-mode #map{
+            filter: grayscale(50%) invert(100%) contrast(90%);
+        }
+    </style>
+</head>
+<body class="dark-mode">
+    <div class="container">
+        <button id="inicioBtn">Explorar CU</button>
+        <button class="theme-toggle">🌙</button>
+    </div>
+    <div id="mapContainer">
+        <div class="map-controls">
+            <div class="search-container">
+                <button class="search-trigger">🔍</button>
+                <div class="search-content">
+                    <div class="search-input-group">
+                        <input type="text" class="search-input" placeholder="Entrada">
+                        <input type="text" class="search-input" placeholder="Salida">
+                    </div>
+                    <button class="search-action">➔</button>
+                </div>
+            </div>
+        </div>
+        <button class="theme-toggle">🌙</button>
+        <button class="close-btn">✕</button>
+        <div id="map"></div>
+    </div>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script>
+        let map;
+        const CU_BOUNDS = [
+            [19.30, -99.21],
+            [19.35, -99.17]
+        ];
+        function initMap(){
+            map = L.map('map',{
+                center: [19.3294, -99.1909],
+                zoom: 16,
+                maxBounds: CU_BOUNDS,
+                maxBoundsViscosity: 1.0,
+                zoomControl: false
+            });
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
+            L.control.zoom({ position: 'bottomright' }).addTo(map);
+        }
+        function toggleMap(show){
+            const mapContainer = document.getElementById('mapContainer');
+            const inicioBtn = document.getElementById('inicioBtn');
+            if(show){
+                mapContainer.style.display = 'block';
+                inicioBtn.style.display = 'none';
+                if(!map) initMap();
+                setTimeout(() => map.invalidateSize(), 100);
+            }else{
+                mapContainer.style.display = 'none';
+                inicioBtn.style.display = 'flex';
+            }
+        }
+        function triggerStartAnimation(){
+            const btn = document.getElementById('inicioBtn');
+            btn.style.animation = 'none';
+            void btn.offsetWidth;
+            btn.style.animation = 'aparecer 1s ease-out';
+        }
+        function toggleTheme(){
+            const body = document.body;
+            const themeBtns = document.querySelectorAll('.theme-toggle');
+            body.classList.toggle('dark-mode');
+            body.classList.toggle('light-mode');
+            themeBtns.forEach(btn=>{
+                btn.textContent = body.classList.contains('dark-mode') ? '🌙' : '☀️';
+            });
+            triggerStartAnimation();
+            if(map) setTimeout(() => map.invalidateSize(), 100);
+        }
+        function handleSearch(){
+            const inputs = document.querySelectorAll('.search-input');
+            const entrada = inputs[0].value;
+            const salida = inputs[1].value;
+            console.log(`Buscando ruta de ${entrada} a ${salida}`);
+            // Lógica de búsqueda
+        }
+        document.getElementById('inicioBtn').addEventListener('click', () => toggleMap(true));
+        document.querySelector('.close-btn').addEventListener('click', () => toggleMap(false));
+        document.querySelectorAll('.theme-toggle').forEach(btn => {
+            btn.addEventListener('click', toggleTheme);
+        });
+        document.querySelector('.search-trigger').addEventListener('click', (e)=>{
+            const container = e.target.closest('.search-container');
+            container.classList.toggle('active');
+        });
+        document.querySelector('.search-action').addEventListener('click', handleSearch);
+        document.querySelectorAll('.search-input').forEach(input => {
+            input.addEventListener('keypress', (e) => {
+                if(e.key === 'Enter') handleSearch();
+            });
+        });
+    </script>
+</body>
+</html>
