@@ -1,15 +1,19 @@
 import React, { useRef, useEffect, useState } from 'react';
 import mapboxgl from 'mapbox-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
-
+import { SearchBox } from "@mapbox/search-js-react";
 const CU_BOUNDS = [
   [ -99.20180065406191, 19.304029335693357],
   [ -99.164676862322, 19.3391027167136],
 ];
 
+const accessToken = import.meta.env.VITE_MAPBOX_TOKEN;
+
 export default function Map() {
   const mapContainer = useRef(null);
   const mapRef = useRef(null);
+  const [mapLoaded, setMapLoaded] = useState(false);
+  const [inputValue, setInputValue] = useState("");
 
   const [locations, setLocations] = useState([]);
   const [origin, setOrigin] = useState(null);
@@ -17,7 +21,7 @@ export default function Map() {
 
   
   useEffect(() => {
-    mapboxgl.accessToken = import.meta.env.VITE_MAPBOX_TOKEN;
+    mapboxgl.accessToken = accessToken;
     mapRef.current = new mapboxgl.Map({
       container: mapContainer.current,
       style: 'mapbox://styles/mapbox/streets-v11',
@@ -83,16 +87,32 @@ export default function Map() {
         ref={mapContainer}
         style={{ position: 'absolute', top: 0, bottom: 0, width: '100%' }}
       />
-      <div
-        className="selection-panel"
-        style={{
-          position: 'absolute', top: 10, left: 10, zIndex: 1000,
-          background: 'white', padding: '0.5rem', borderRadius: '4px', color: 'black'
-        }}
-      >
-        <div>Origen: {origin?.name ?? '—'}</div>
-        <div>Destino: {destination?.name ?? '—'}</div>
+      
+      <div style={{padding:'1em'}}>
+        <SearchBox
+            accessToken={import.meta.env.VITE_MAPBOX_TOKEN}
+            map={mapRef.current}
+            mapboxgl={mapboxgl}
+            value={inputValue}
+            onChange={(d) => {
+            setInputValue(d);
+            }}
+            placeholder='¿A dónde vamos?'
+            marker
+            theme={{
+            variables: {
+            unit: '16px',              // tamaño base de espaciado
+            padding: '1rem',        // padding interno del input
+            borderRadius: '8px',
+            boxShadow: '0 2px 6px rgba(0,0,0,0.1)',
+            fontFamily: 'Anonymous Pro',
+            top:'50px', 
+            position:''
+            },
+            }}
+        />
       </div>
+      
     </>
   );
 }

@@ -506,7 +506,7 @@
         },
         {
             "type":"Feature",
-            "properties":{"id":63, "name":"Pumitas 1", "key":"pumitas_i"},
+            "properties":{"id":63, "name":"Pumitas I", "key":"pumitas_i"},
             "geometry":{
                 "type":"Point",
                 "coordinates":[-99.19425945771191, 19.32454430016486]
