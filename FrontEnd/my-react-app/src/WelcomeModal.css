@@ -1,0 +1,48 @@
+.Container{
+    height: 80vh;
+    width: 80vw;
+    background-color: white;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;   
+    position: fixed;
+    right: 10%;
+    top:10%;
+    border-radius: 10%;
+    
+}
+
+@media(max-width: 1024px){
+    .Container{
+        height: 50vh;
+        top:25%;
+    }
+}
+
+
+
+
+
+.Modal-Button{
+    /* position: relative; */
+    /* display: flex; */
+    justify-content: center;
+    position: relative;
+    width:clamp(150px, 20vw, 850px);
+    font-size: clamp(15px, 2.5vw, 30px);
+    height: clamp(50px, 7.5vw, 300px);
+    border-radius: 15%;
+    background-color: #002B7A;
+    font-family: 'Anonymous Pro';
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    color: #D59F0F;
+    font-style: bold;
+}
+
+.Modal-Title{
+    padding-bottom: clamp(15vh, 20vh, 35vh);
+    position: relative;
+    font-family: 'Anonymous Pro';
+    font-size: clamp(2.5rem, 7vw, 5rem);
+    color:#D59F0F;
+}
