@@ -12,8 +12,8 @@ const accessToken = import.meta.env.VITE_MAPBOX_TOKEN;
 export default function Map() {
   const mapContainer = useRef(null);
   const mapRef = useRef(null);
-  const [mapLoaded, setMapLoaded] = useState(false);
   const [inputValue, setInputValue] = useState("");
+  const [showMarkers, setShowMarkers] = useState(false);
 
   const [locations, setLocations] = useState([]);
   const [origin, setOrigin] = useState(null);
@@ -41,9 +41,14 @@ export default function Map() {
       .catch(console.error);
   }, []);
 
-  
+  const markersRef = useRef([]);
   useEffect(() => {
     if (!mapRef.current || locations.length === 0) return;
+
+    // Limpiamos cualquier marcador previo
+    markersRef.current.forEach(marker => marker.remove());
+    markersRef.current = [];
+
 
     locations.forEach(feature => {
       const [lng, lat] = feature.geometry.coordinates;
@@ -52,14 +57,14 @@ export default function Map() {
       const el = document.createElement('div');
       el.className = 'marker';
       el.title = name;
-      el.style.backgroundImage   = "url('/Location.png')";
-      el.style.backgroundSize    = 'contain';
-      el.style.backgroundRepeat  = 'no-repeat';
-      el.style.width             = '35px';
-      el.style.height            = '40px';  
-      el.style.cursor            = 'pointer';
-    //   el.style.transform         = 'translate(-50%, -100%)';
-    // el.style.backgroundColor = 'rgba(255,0,0,0.3)';
+      Object.assign(el.style, {
+        backgroundImage: "url('/Location.png')",
+        backgroundSize: 'contain',
+        backgroundRepeat: 'no-repeat',
+        width: '35px',
+        height: '40px',
+        cursor: 'pointer',
+      });
 
       el.addEventListener('click', () => {
         const locObj = { name, coords: [lng, lat] };
@@ -73,45 +78,75 @@ export default function Map() {
         }
       });
 
-      new mapboxgl.Marker(el)
-        .setLngLat([lng, lat])
-        .addTo(mapRef.current);
+      
+      const marker = new mapboxgl.Marker(el).setLngLat([lng, lat]);
+      markersRef.current.push(marker);
+      // Si showMarkers está activo, añadirlos al mapa de una vez
+        if (showMarkers) {
+        markersRef.current.forEach(m => m.addTo(mapRef.current));
+        }
     });
-  }, [locations, origin, destination]);
+  }, [locations, showMarkers]);
 
+    const toggleMarkers = () => {
+        if (showMarkers) {
+        // los ocultamos
+        markersRef.current.forEach(marker => marker.remove());
+        } else {
+        // los mostramos
+        markersRef.current.forEach(marker => marker.addTo(mapRef.current));
+        }
+        setShowMarkers(!showMarkers);
+    };
   
 
   return (
     <>
+    
       <div
         ref={mapContainer}
         style={{ position: 'absolute', top: 0, bottom: 0, width: '100%' }}
       />
       
-      <div style={{padding:'1em'}}>
-        <SearchBox
-            accessToken={import.meta.env.VITE_MAPBOX_TOKEN}
-            map={mapRef.current}
-            mapboxgl={mapboxgl}
-            value={inputValue}
-            onChange={(d) => {
-            setInputValue(d);
+      <div style={{justifyContent:'space-around', display:'flex'}}>
+        <div style={{padding:'1em', position:'relative', display:'flex'}}>
+            <SearchBox
+                accessToken={import.meta.env.VITE_MAPBOX_TOKEN}
+                map={mapRef.current}
+                mapboxgl={mapboxgl}
+                value={inputValue}
+                onChange={(d) => {
+                setInputValue(d);
+                }}
+                placeholder='¿A dónde vamos?'
+                marker
+                theme={{
+                variables: {
+                unit: '16px',              // tamaño base de espaciado
+                padding: '1rem',        // padding interno del input
+                borderRadius: '8px',
+                boxShadow: '0 2px 6px rgba(0,0,0,0.1)',
+                fontFamily: 'Anonymous Pro',
+                top:'50px', 
+                },
+                }}
+            />
+        </div>
+        <div style={{ position: 'relative', top: 10, zIndex: 1000, display:'flex'}}>
+            <button
+            onClick={toggleMarkers}
+            style={{
+                padding: '0.5rem 1rem',
+                fontSize: '1rem',
+                cursor: 'pointer',
             }}
-            placeholder='¿A dónde vamos?'
-            marker
-            theme={{
-            variables: {
-            unit: '16px',              // tamaño base de espaciado
-            padding: '1rem',        // padding interno del input
-            borderRadius: '8px',
-            boxShadow: '0 2px 6px rgba(0,0,0,0.1)',
-            fontFamily: 'Anonymous Pro',
-            top:'50px', 
-            position:''
-            },
-            }}
-        />
+            >
+            {showMarkers ? 'Cancelar' : 'Selecciona tu punto de partida'}
+            </button>
+        </div>
       </div>
+
+      
       
     </>
   );

@@ -11,6 +11,7 @@ const WelcomeModal =({onClose}) => {
         <div className='Container'>
             <h1 className='Modal-Title'>Bienvenido a PuMaps</h1>
             <button className='Modal-Button' onClick={onClose}>Entrar</button>
+            
         </div>
     );
 }
