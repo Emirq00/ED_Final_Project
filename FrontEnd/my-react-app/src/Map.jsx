@@ -12,7 +12,7 @@ const Map = () => {
   const mapContainer = useRef(null);
   const mapRef = useRef(null);
   useEffect(() => {
-    mapboxgl.accessToken = "pk.eyJ1IjoiZW1pci1xbyIsImEiOiJjbWI1aW10cmgwcDRrMmxxNnd5NnNpcnV2In0.9pyOmah5IOK3DqPhSpouHA";
+    mapboxgl.accessToken = process.env.REACT_APP_MAPBOX_TOKEN;
     const map = new mapboxgl.Map({
       container: mapContainer.current,
       style: 'mapbox://styles/mapbox/streets-v11',
