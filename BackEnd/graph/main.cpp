@@ -5,6 +5,7 @@ using namespace std;
 int main() {
     createMap();
     createGraph();
+    createRoutes();
     string station, station2;
     
     cout << "Ingrese la estacion en la que se encuentra: ";
@@ -26,16 +27,24 @@ int main() {
     for(auto i : shortest_routes[m[station2]]) {
         for(auto &j : m) {
             if(j.second == i) {
-                cout << j.first << " ";
+                cout << j.first << " routes[";
+                vector<int> rt = routes[j.first];
+                for(auto i : rt) {
+                    cout << i << ", ";
+                }
+                cout << "]\n";
             }
         }
     }
     cout << "\nLa distancia recorrida entre " << station << " y " << station2 << " es: " << dist[m[station2]] << "[m]\n";
-    srand(time(0));
     
-    double vprom = rand() % 6 + 5; // [km/h]
-    double time = (dist[m[station2]]/1000)/vprom; // [h]
+    srand(time(0));
+    float vprom = rand() % 6 + 5; // [km/h]
+    
+    float distance = dist[m[station2]]/1000; // [km]
+    float time = distance/vprom; // [h]
     time *= 60;
+    
     cout << "Tiempo aproximado de llegada: " << time << "[min]\n";
     return 0;
 }
