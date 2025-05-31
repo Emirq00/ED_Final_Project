@@ -27,7 +27,7 @@ int main() {
     for(auto i : shortest_routes[m[station2]]) {
         for(auto &j : m) {
             if(j.second == i) {
-                cout << j.first << " routes[";
+                cout << j.first << " - ruta(s)[";
                 vector<int> rt = routes[j.first];
                 for(auto i : rt) {
                     cout << i << ", ";
