@@ -618,7 +618,7 @@
         },
         {
             "type":"Feature",
-            "properties":{"id":77, "name":"Estacionamieto 7", "key":"estacionamiento_7"},
+            "properties":{"id":77, "name":"Estacionamiento 7", "key":"estacionamiento_7"},
             "geometry":{
                 "type":"Point",
                 "coordinates":[-99.19240309702003, 19.329140142205326]
@@ -626,7 +626,7 @@
         },
         {
             "type":"Feature",
-            "properties":{"id":78, "name":"Estacionamieto 6", "key":"estacionamiento_6"},
+            "properties":{"id":78, "name":"Estacionamiento 6", "key":"estacionamiento_6"},
             "geometry":{
                 "type":"Point",
                 "coordinates":[-99.19339023105668, 19.330280763392594]
@@ -634,7 +634,7 @@
         },
         {
             "type":"Feature",
-            "properties":{"id":79, "name":"Estacionamieto 4", "key":"estacionamiento_4"},
+            "properties":{"id":79, "name":"Estacionamiento 4", "key":"estacionamiento_4"},
             "geometry":{
                 "type":"Point",
                 "coordinates":[-99.1941587474729, 19.33124885920721]
@@ -642,7 +642,7 @@
         },
         {
             "type":"Feature",
-            "properties":{"id":80, "name":"Estacionamieto 3", "key":"estacionamiento_3"},
+            "properties":{"id":80, "name":"Estacionamiento 3", "key":"estacionamiento_3"},
             "geometry":{
                 "type":"Point",
                 "coordinates":[-99.19461834091832, 19.332609410784254]
@@ -650,7 +650,7 @@
         },
         {
             "type":"Feature",
-            "properties":{"id":81, "name":"Estacionamieto 2", "key":"estacionamiento_2"},
+            "properties":{"id":81, "name":"Estacionamiento 2", "key":"estacionamiento_2"},
             "geometry":{
                 "type":"Point",
                 "coordinates":[-99.19324780333808, 19.33348081246311]
