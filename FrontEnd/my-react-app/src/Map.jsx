@@ -71,7 +71,11 @@ export default function Map() {
       });
 
       el.addEventListener('click', () => {
-        setTempSelection({ name, coords: [lng, lat] });
+        setTempSelection({
+          name: feature.properties.name,
+          key: feature.properties.key,     // 👈 agrega esto
+          coords: [lng, lat],
+        });
         setSelectedFeature(feature);
       });
 
@@ -123,29 +127,44 @@ export default function Map() {
     setSelectedFeature(null);
   };
 
-  const handleSend = () => {
-    const payload = {
-      origin: { name: origin.name, lng: origin.coords[0], lat: origin.coords[1] },
-      destination: { name: destination.name, lng: destination.coords[0], lat: destination.coords[1] },
-    };
-    fetch('/api/ruta', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(payload),
-    })
-      .then(res => { if (!res.ok) throw new Error(); return res.json(); })
-      .then(() => {
-        alert('Ruta registrada con éxito');
-        setOrigin(null);
-        setDestination(null);
-        setDisabledNames([]);
-        setSelectionStep('none');
-        setTempSelection(null);
-        setSelectedFeature(null);
-      })
-      .catch(() => alert('Falló el registro de la ruta'));
+const handleSend = () => {
+  // Verifica que origen y destino estén definidos y tengan key
+  if (!origin || !origin.key || !destination || !destination.key) {
+    alert("Origen o destino inválido.");
+    return;
+  }
+
+  const payload = {
+    origen: origin.key,
+    destino: destination.key,
   };
 
+  console.log("Enviando solicitud al backend...");
+  console.log("Payload:", payload);
+
+  fetch("http://127.0.0.1:8080/ruta", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(payload),
+  })
+    .then(res => {
+      if (!res.ok) {
+        return res.text().then(text => {
+          alert("Error del servidor: " + text);
+          throw new Error(text);
+        });
+      }
+      return res.json();
+    })
+    .then((data) => {
+      console.log("Respuesta del backend:", data);
+      alert("Ruta calculada:\n" + JSON.stringify(data, null, 2));
+    })
+    .catch((err) => {
+      console.error("Error de conexión:", err);
+      alert("No se pudo conectar al backend.");
+    });
+};
 
   let mainText = 'Iniciar viaje';
   let mainDisabled = false;
