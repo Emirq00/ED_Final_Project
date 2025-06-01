@@ -33,14 +33,13 @@ int main() {
             }
             
             // Ejecutar Dijkstra
-            shortest_routes = dijkstra(92, m[origen], adj);
-            vector<int> ruta_ids = shortest_routes[m[destino]];
+            routes_ids = dijkstra(92, m[origen], m[destino], adj);
             
             json respuesta;
             json pasos = json::array();
             
             // Armar respuesta con nombres y rutas
-            for (auto i : ruta_ids) {
+            for (auto i : routes_ids) {
                 for (auto &j : m) {
                     if (j.second == i) {
                         json paso;
