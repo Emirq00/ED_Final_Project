@@ -6,31 +6,25 @@ using namespace std;
 using json = nlohmann::json;
 
 int main() {
-    createMap();     
-    createGraph();   
-    createRoutes();  
-
+    createMap();
+    createGraph();
+    createRoutes();
+    
     httplib::Server svr;
-
     
     svr.Options("/ruta", [](const httplib::Request&, httplib::Response& res) {
-        cout << "[DEBUG][OPTIONS] /ruta recibido" << endl;
         res.set_header("Access-Control-Allow-Origin", "*");
         res.set_header("Access-Control-Allow-Methods", "POST, OPTIONS");
         res.set_header("Access-Control-Allow-Headers", "Content-Type");
         res.status = 204;
     });
-
+    
     svr.Post("/ruta", [](const httplib::Request& req, httplib::Response& res) {
         try {
             
             auto body = json::parse(req.body);
             string origen  = body["origen"];
             string destino = body["destino"];
-
-            cout << "[DEBUG] POST /ruta → origen='" << origen
-                 << "', destino='" << destino << "'" << endl;
-
             
             if (m.find(origen) == m.end() || m.find(destino) == m.end()) {
                 res.status = 400;
@@ -56,10 +50,11 @@ int main() {
 
             json respuesta;
             json pasos = json::array();
-            for (int nodo : ruta_ids) {
-                
-                for (auto &par : m) {
-                    if (par.second == nodo) {
+            
+            // Armar respuesta con nombres y rutas
+            for (auto i : routes_ids) {
+                for (auto &j : m) {
+                    if (j.second == i) {
                         json paso;
                         paso["estacion"] = par.first;
                         paso["rutas"]    = routes[par.first];
@@ -78,8 +73,8 @@ int main() {
             float distance_km = dist[idx_destino] / 1000.0f;
             float tiempo_min = (distance_km / vprom) * 60.0f;
             respuesta["tiempo_estimado_min"] = tiempo_min;
-
-
+            
+            // Agregar header CORS y responder JSON
             res.set_header("Access-Control-Allow-Origin", "*");
             res.set_content(respuesta.dump(), "application/json");
             cout << "[DEBUG]   Respuesta enviada al cliente\n";
@@ -97,7 +92,7 @@ int main() {
             res.set_content("Error interno en el servidor", "text/plain");
         }
     });
-
+    
     cout << "Servidor corriendo en http://localhost:8080\n";
     svr.listen("0.0.0.0", 8080);
 }
