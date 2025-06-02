@@ -32,41 +32,36 @@ int main() {
                 res.set_content("Estación no válida", "text/plain");
                 return;
             }
-
-
             int idx_origen  = m[origen];
             int idx_destino = m[destino];
-
             
             int N = static_cast<int>(adj.size());  
             vector<vector<int>> shortest_routes = dijkstra(N, idx_origen, adj);
-
-
+            
             vector<int> ruta_ids = shortest_routes[idx_destino];
-
+            
             cout << "[DEBUG]   IDs en ruta_ids:";
             for (int id : ruta_ids) cout << " " << id;
             cout << endl;
-
+            
             json respuesta;
             json pasos = json::array();
             
             // Armar respuesta con nombres y rutas
-            for (auto i : routes_ids) {
+            for (auto i : ruta_ids) {
                 for (auto &j : m) {
                     if (j.second == i) {
                         json paso;
-                        paso["estacion"] = par.first;
-                        paso["rutas"]    = routes[par.first];
+                        paso["estacion"] = j.first;
+                        paso["rutas"]    = routes[j.first];
                         pasos.push_back(paso);
                         break;
                     }
                 }
             }
-
+            
             respuesta["ruta"]             = pasos;
             respuesta["distancia_metros"] = dist[idx_destino];
-
             
             srand(static_cast<unsigned>(time(nullptr)));
             float vprom = static_cast<float>(rand() % 6 + 5); 
