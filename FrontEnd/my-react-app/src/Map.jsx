@@ -173,7 +173,7 @@ export default function Map() {
     setSelectedFeature(null);
   };
 
-  // Ahora retorna el objeto de ruta completo (geometry, distance, duration)
+  
   async function fetchRouteGeometry(waypoints) {
     if (!waypoints || waypoints.length < 2) {
       throw new Error("Se requieren al menos 2 puntos para calcular la ruta");
@@ -577,13 +577,13 @@ export default function Map() {
             }}>
               <div style={{display:'flex', flexDirection:'column'}}>
                 <div style={{padding:'auto', paddingBottom:'1em', display:'flex'}}>
-                  <strong style={{ color: '#D59F0F'  }}>Distancia:</strong>
+                  <strong style={{ color: '#D59F0F'  }}>Distancia recorrida:</strong>
                   <span style={{ marginLeft: '0.2rem', color: '#002B7A', fontWeight:'500'}}>
                     {formatDistance(routeDistance)}
                   </span>
                 </div>
                 <div style={{display:'flex'}}>
-                  <strong style={{ color: '#D59F0F' }}>Duración:</strong>
+                  <strong style={{ color: '#D59F0F' }}>Tiempo estimado:</strong>
                   <span style={{ marginLeft: '0.2rem', color: '#002B7A', fontWeight:'500' }}>
                     {formatDuration(routeDuration)}
                   </span>
