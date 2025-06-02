@@ -33,7 +33,8 @@ int main() {
             }
             
             // Ejecutar Dijkstra
-            routes_ids = dijkstra(92, m[origen], m[destino], adj);
+            shortest_routes = dijkstra(92, m[origen], adj);
+            vector<int> routes_ids = shortest_routes[m[destino]];
             
             json respuesta;
             json pasos = json::array();
@@ -57,7 +58,7 @@ int main() {
             // Calcular tiempo estimado
             srand(time(0));
             float vprom = rand() % 6 + 5; // km/h aleatorio
-            float distance_km = dist[m[destino]] / 1000.0;
+            float distance_km = float(dist[m[destino]]) / 1000.0;
             float tiempo_min = (distance_km / vprom) * 60.0;
             respuesta["tiempo_estimado_min"] = tiempo_min;
             

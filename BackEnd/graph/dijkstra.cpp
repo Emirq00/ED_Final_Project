@@ -8,12 +8,12 @@
 #include "data.hpp"
 using namespace std;
 
-vector<int> dijkstra(int v, int source, int destination, vector<vector<pair<int,int>>>& adj) {
+vector<vector<int>> dijkstra(int v, int source, vector<vector<pair<int,int>>>& adj) {
     priority_queue<pair<int,int>, vector<pair<int,int>>, greater<pair<int,int>>> pq;
-    vector<int> nodes(v+1, -1);
-    vector<int> r_ids;
+    vector<vector<int>> nodes(v+1);
     
     dist[source] = 0;
+    nodes[source] = {source};
     pq.push({0, source});
     
     while(!pq.empty()) {
@@ -29,18 +29,12 @@ vector<int> dijkstra(int v, int source, int destination, vector<vector<pair<int,
             
             if(dist[u] + weight < dist[v]) {
                 dist[v] = dist[u] + weight;
-                nodes[v] = u;
+                nodes[v] = nodes[u];
+                nodes[v].push_back(v);
                 pq.push({dist[v], v});
             }
         }
     }
     
-    int i = destination;
-    while(i != source) {
-        r_ids.push_back(i);
-        i = nodes[i];
-    } r_ids.push_back(source);
-    reverse(r_ids.begin(),r_ids.end());
-    
-    return r_ids;
+    return nodes;
 }
