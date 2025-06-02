@@ -28,13 +28,34 @@ export default function Map() {
 
   const [isImageOpen, setIsImageOpen] = useState(false);
 
-  
   const [estacionesCoords, setEstacionesCoords] = useState({});
   const [estacionesNames, setEstacionesNames] = useState({});
 
   const [routeGeometry, setRouteGeometry] = useState(null);
   const [routeSteps, setRouteSteps] = useState(null);
+  const [routeDistance, setRouteDistance] = useState(null);
+  const [routeDuration, setRouteDuration] = useState(null);
   const [selectedStepIndex, setSelectedStepIndex] = useState(null);
+
+  // Función para asignar color según número de ruta
+  const getRouteColor = (routeNum) => {
+    switch (routeNum) {
+      case 1: return "#3dc55e";    // ruta 1
+      case 2: return "#f1e01f";    // ruta 2
+      case 3: return "#07680a";    // ruta 3
+      case 4: return "#583404";    // ruta 4
+      case 5: return "#23bae6";    // ruta 5
+      case 6: return "#c80000";    // ruta 6
+      case 7: return "#ffaf2c";    // ruta 7
+      case 8: return "#020e86";    // ruta 8
+      case 9: return "#8d3ca7";    // ruta 9
+      case 10: return "#161617";   // ruta 10
+      case 11: return "#57109d";   // ruta 11
+      case 12: return "#c8a6cc";   // ruta 12
+      case 13: return "#c5eaec";   // ruta 13
+      default: return "#7f8c8d";   // gris por defecto
+    }
+  };
 
   useEffect(() => {
     mapboxgl.accessToken = accessToken;
@@ -55,11 +76,11 @@ export default function Map() {
         setLocations(data.features);
 
         const coordsDict = {};
-        const namesDict  = {};
+        const namesDict = {};
         data.features.forEach((feature) => {
-          const key          = feature.properties.key;           
-          const coords       = feature.geometry.coordinates;   
-          const nombreBonito = feature.properties.name;        
+          const key          = feature.properties.key;
+          const coords       = feature.geometry.coordinates;
+          const nombreBonito = feature.properties.name;
           coordsDict[key] = coords;
           namesDict[key]  = nombreBonito;
         });
@@ -152,6 +173,7 @@ export default function Map() {
     setSelectedFeature(null);
   };
 
+  // Ahora retorna el objeto de ruta completo (geometry, distance, duration)
   async function fetchRouteGeometry(waypoints) {
     if (!waypoints || waypoints.length < 2) {
       throw new Error("Se requieren al menos 2 puntos para calcular la ruta");
@@ -169,7 +191,7 @@ export default function Map() {
     if (!json.routes || json.routes.length === 0) {
       throw new Error("Mapbox Directions no devolvió rutas");
     }
-    return json.routes[0].geometry; 
+    return json.routes[0]; // retorna objeto con geometry, distance (en metros) y duration (en segundos)
   }
 
   const finalizeRoute = () => {
@@ -181,6 +203,8 @@ export default function Map() {
 
     setRouteSteps(null);
     setRouteGeometry(null);
+    setRouteDistance(null);
+    setRouteDuration(null);
     setSelectedStepIndex(null);
 
     setOrigin(null);
@@ -194,10 +218,8 @@ export default function Map() {
   const handleSendOrFinalize = () => {
     const isRouteActive = Boolean(routeSteps);
     if (isRouteActive) {
-      
       finalizeRoute();
     } else {
-      
       if (!origin || !origin.key || !destination || !destination.key) {
         alert("Origen o destino inválido.");
         return;
@@ -210,7 +232,7 @@ export default function Map() {
       })
       .then(res => {
         if (!res.ok) {
-          return res.text().then(text => { 
+          return res.text().then(text => {
             alert("Error del servidor: " + text);
             throw new Error(text);
           });
@@ -221,8 +243,10 @@ export default function Map() {
         setRouteSteps(data.ruta);
         const coordsWaypoints = data.ruta.map(step => estacionesCoords[step.estacion]);
         try {
-          const geometry = await fetchRouteGeometry(coordsWaypoints);
-          setRouteGeometry(geometry);
+          const routeObj = await fetchRouteGeometry(coordsWaypoints);
+          setRouteGeometry(routeObj.geometry);
+          setRouteDistance(routeObj.distance);   // en metros
+          setRouteDuration(routeObj.duration);   // en segundos
         } catch (err) {
           console.error(err);
           alert(err.message);
@@ -261,16 +285,13 @@ export default function Map() {
     else handleSendOrFinalize();
   };
 
-  
   useEffect(() => {
     const map = mapRef.current;
     if (!map || !routeGeometry || !routeSteps) return;
 
-    
     if (map.getLayer("routeLine"))  map.removeLayer("routeLine");
     if (map.getSource("routeLine")) map.removeSource("routeLine");
 
-    
     map.addSource("routeLine", {
       type: "geojson",
       data: {
@@ -280,7 +301,6 @@ export default function Map() {
       },
     });
 
-    
     map.addLayer({
       id: "routeLine",
       type: "line",
@@ -295,11 +315,9 @@ export default function Map() {
       },
     });
 
-    
     stepMarkersRef.current.forEach(m => m.remove());
     stepMarkersRef.current = [];
 
-    
     routeSteps.forEach((step, index) => {
       const key = step.estacion;
       const coords = estacionesCoords[key];
@@ -309,7 +327,7 @@ export default function Map() {
 
       if (index === selectedStepIndex) {
         Object.assign(el.style, {
-          backgroundColor: "#FFD700", 
+          backgroundColor: "#FFD700",
           borderRadius: "50%",
           width: "18px",
           height: "18px",
@@ -339,7 +357,6 @@ export default function Map() {
       stepMarkersRef.current.push(marker);
     });
 
-    
     if (selectedStepIndex === null) {
       const coords = routeGeometry.coordinates;
       const lats   = coords.map(c => c[1]);
@@ -356,6 +373,22 @@ export default function Map() {
       );
     }
   }, [routeGeometry, routeSteps, estacionesCoords, selectedStepIndex]);
+
+  const formatDistance = (meters) => {
+    if (meters == null) return '--';
+    const km = meters / 1000;
+    return `${km.toFixed(2)} km`;
+  };
+
+  const formatDuration = (seconds) => {
+    if (seconds == null) return '--';
+    const hrs = Math.floor(seconds / 3600);
+    const mins = Math.ceil((seconds % 3600) / 60);
+    if (hrs > 0) {
+      return `${hrs}h ${mins} m`;
+    }
+    return `${mins}m`;
+  };
 
   return (
     <>
@@ -389,14 +422,15 @@ export default function Map() {
             disabled={mainDisabled}
             style={{
               padding: '0.5rem 1rem',
-              fontSize: '1.2rem',
-              backgroundColor: 'white',
-              color: '#000000',
+              fontSize: '1rem',
+              backgroundColor: '#002B7A',
+              color: '#D59F0F',
+              fontWeight:'bold',
+
               border: 'none',
               borderRadius: '4px',
               cursor: mainDisabled ? 'not-allowed' : 'pointer',
               opacity: mainOpacity,
-              fontFamily: 'Anonymous Pro',
             }}
           >{mainText}</button>
         </div>
@@ -412,11 +446,11 @@ export default function Map() {
           borderRadius: '8px',
           zIndex: 1000
         }}>
-          <p style={{ color: 'black' }}>
-            <strong style={{ color: 'black' }}>Origen:</strong> {origin?.name || '—'}
+          <p style={{ color: '#002B7A', fontWeight:'500' }}>
+            <strong style={{ color: '#D59F0F' }}>Origen:</strong> {origin?.name || '—'}
           </p>
-          <p style={{ color: 'black' }}>
-            <strong style={{ color: 'black' }}>Destino:</strong> {destination?.name || '—'}
+          <p style={{ color: '#002B7A', fontWeight:'500'}}>
+            <strong style={{ color: '#D59F0F' }}>Destino:</strong> {destination?.name || '—'}
           </p>
         </div>
       )}
@@ -508,7 +542,6 @@ export default function Map() {
         )}
       </div>
 
-      
       <div
         style={{
           position: 'fixed',
@@ -532,8 +565,36 @@ export default function Map() {
       >
         {routeSteps ? (
           <>
-            <h3 style={{ margin: '0 0 1rem 0', fontSize: '1.25rem', fontWeight: 'bold', color: 'black' }}>
-              Pasos de la ruta
+            
+            <div style={{
+              marginBottom: '1rem',
+              padding: '0.5rem',
+              backgroundColor: '#f5f5f5',
+              borderRadius: '6px',
+              display: 'flex',
+              justifyContent: 'space-between',
+              alignItems: 'center',
+            }}>
+              <div style={{display:'flex', flexDirection:'column'}}>
+                <div style={{padding:'auto', paddingBottom:'1em', display:'flex'}}>
+                  <strong style={{ color: '#D59F0F'  }}>Distancia:</strong>
+                  <span style={{ marginLeft: '0.2rem', color: '#002B7A', fontWeight:'500'}}>
+                    {formatDistance(routeDistance)}
+                  </span>
+                </div>
+                <div style={{display:'flex'}}>
+                  <strong style={{ color: '#D59F0F' }}>Duración:</strong>
+                  <span style={{ marginLeft: '0.2rem', color: '#002B7A', fontWeight:'500' }}>
+                    {formatDuration(routeDuration)}
+                  </span>
+                </div>
+              </div>
+              
+            </div>
+            
+
+            <h3 style={{ margin: '0 0 1rem 0', fontSize: '1.25rem', fontWeight: 'bold', color: '#D59F0F' }}>
+              Ruta óptima
             </h3>
             <ul style={{ listStyle: 'none', margin: 0, padding: 0 }}>
               {routeSteps.map((step, idx) => {
@@ -554,8 +615,8 @@ export default function Map() {
                       borderBottom: '1px solid #ddd',
                       cursor: 'pointer',
                       backgroundColor: isSelected ? '#e0f7fa' : 'transparent',
-                      fontWeight:     isSelected ? 'bold' : 'normal',
-                      color: 'black'
+                      fontWeight:     isSelected ? 'bold' : '500',
+                      color: '#002B7A'
                     }}
                   >
                     {`${idx + 1}. ${nombreLegible}`}
@@ -583,16 +644,12 @@ export default function Map() {
               margin: 0,
               fontSize: '1.25rem',
               fontWeight: 'bold',
-              color: 'black',
+              color: '#D59F0F',
               padding: '1em'
             }}>
               {selectedFeature.properties.name}
             </h3>
             
-            <p style={{ margin: '0.5rem 0', color: '#555' }}>
-              {selectedFeature.properties.description}
-            </p>
-            {console.log("PHOTO PATH →", selectedFeature.properties.photo)}
             {selectedFeature.properties.photo && (
               <img
                 src={selectedFeature.properties.photo}
@@ -602,21 +659,63 @@ export default function Map() {
                   height: '120px',
                   objectFit: 'cover',
                   borderRadius: '8px',
-                  border:'2px solid #D59F0F', zIndex:'10000', cursor:'pointer'
+                  border:'2px solid #D59F0F',
+                  zIndex:'10000',
+                  cursor:'pointer'
                 }}
                 onClick={() => setIsImageOpen(true)}
               />
             )}
-            {selectedFeature.properties.routes && (
-              <>
-                <p style={{ margin: '0.75rem 0 0.25rem 0', fontWeight: 'bold', color: 'black' }}>Rutas:</p>
-                <ul style={{ margin: 0, paddingLeft: '1.25rem', color: '#555' }}>
-                  {selectedFeature.properties.routes.map((r, i) => (
-                    <li key={i}>{r}</li>
-                  ))}
-                </ul>
-              </>
-            )}
+
+            
+            <div style={{
+              position: 'absolute',
+              bottom: '1rem',
+              left: '1rem',
+              right: '1rem',
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
+            }}>
+              <span style={{ fontWeight: 'bold', marginBottom: '0.5rem', color: '#D59F0F' }}>
+                Rutas de PumaBus:
+              </span>
+              <div style={{
+                display: 'flex',
+                flexWrap: 'wrap',
+                gap: '0.5rem',
+                justifyContent: 'center',
+              }}>
+                {Array.isArray(selectedFeature.properties.routes) && selectedFeature.properties.routes.length > 0 ? (
+                  selectedFeature.properties.routes.map((r) => (
+                    <span
+                      key={r}
+                      style={{
+                        backgroundColor: getRouteColor(r),
+                        color: 'white',
+                        fontWeight: 'bold',
+                        fontSize: '0.85rem',
+                        width: '2.30em',
+                        height: '2rem',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        borderRadius: '4px',
+                        boxShadow: '0 1px 3px rgba(0,0,0,0.2)'
+                      }}
+                    >
+                      {r}
+                    </span>
+                  ))
+                ) : (
+                  <span style={{ fontStyle: 'italic', color: '#7f8c8d' }}>
+                    Sin rutas disponibles
+                  </span>
+                )}
+              </div>
+            </div>
+            
+
           </>
         ) : null}
       </div>
