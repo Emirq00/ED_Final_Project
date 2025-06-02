@@ -128,6 +128,7 @@ export default function Map() {
   };
 
 const handleSend = () => {
+   console.log("Estado al enviar - origin:", origin, ", destination:", destination);
   // Verifica que origen y destino estén definidos y tengan key
   if (!origin || !origin.key || !destination || !destination.key) {
     alert("Origen o destino inválido.");
@@ -141,7 +142,6 @@ const handleSend = () => {
 
   console.log("Enviando solicitud al backend...");
   console.log("Payload:", payload);
-
   fetch("http://127.0.0.1:8080/ruta", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
@@ -154,7 +154,9 @@ const handleSend = () => {
           throw new Error(text);
         });
       }
+      
       return res.json();
+      
     })
     .then((data) => {
       console.log("Respuesta del backend:", data);
