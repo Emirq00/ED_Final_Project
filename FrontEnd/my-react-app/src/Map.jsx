@@ -26,6 +26,8 @@ export default function Map() {
   const markersRef = useRef([]);
   const stepMarkersRef = useRef([]);
 
+  const [isImageOpen, setIsImageOpen] = useState(false);
+
   
   const [estacionesCoords, setEstacionesCoords] = useState({});
   const [estacionesNames, setEstacionesNames] = useState({});
@@ -586,9 +588,11 @@ export default function Map() {
             }}>
               {selectedFeature.properties.name}
             </h3>
+            
             <p style={{ margin: '0.5rem 0', color: '#555' }}>
               {selectedFeature.properties.description}
             </p>
+            {console.log("PHOTO PATH →", selectedFeature.properties.photo)}
             {selectedFeature.properties.photo && (
               <img
                 src={selectedFeature.properties.photo}
@@ -597,8 +601,10 @@ export default function Map() {
                   width: '100%',
                   height: '120px',
                   objectFit: 'cover',
-                  borderRadius: '8px'
+                  borderRadius: '8px',
+                  border:'2px solid #D59F0F', zIndex:'10000', cursor:'pointer'
                 }}
+                onClick={() => setIsImageOpen(true)}
               />
             )}
             {selectedFeature.properties.routes && (
@@ -614,6 +620,38 @@ export default function Map() {
           </>
         ) : null}
       </div>
+
+      {isImageOpen && selectedFeature && (
+        <div
+          onClick={() => setIsImageOpen(false)}
+          style={{
+            position: 'fixed',
+            top: 0,
+            left: 0,
+            width: '100vw',
+            height: '100vh',
+            backgroundColor: 'rgba(0, 0, 0, 0.8)',
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            zIndex: 2000,
+            cursor: 'zoom-out'
+          }}
+        >
+          <img
+            src={selectedFeature.properties.photo}
+            alt={selectedFeature.properties.name}
+            style={{
+              maxWidth: '90vw',
+              maxHeight: '90vh',
+              objectFit: 'contain',
+              borderRadius: '8px',
+              boxShadow: '0 0 20px rgba(255,255,255,0.3)'
+            }}
+            onClick={e => e.stopPropagation()}
+          />
+        </div>
+      )}
     </>
   );
 }

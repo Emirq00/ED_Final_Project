@@ -3,7 +3,7 @@
     "features":[
         {
             "type":"Feature",
-            "properties":{"id":1, "name":"Base Metro Universidad", "key":"base_metro_universidad"},
+            "properties":{"id":1, "name":"Base Metro Universidad", "key":"base_metro_universidad", "photo":"/Imagenes/base_metro_universidad.jpg", "description":" "},
             "geometry":{
                 "type":"Point",
                 "coordinates":[-99.17484728071443, 19.32371074952203]
@@ -11,7 +11,7 @@
         },
         {
            "type":"Feature",
-            "properties":{"id":2, "name":"CENDI", "key":"cendi"},
+            "properties":{"id":2, "name":"CENDI", "key":"cendi", "photo":"/Imagenes/CENDI.jpg", "description":" "},
             "geometry":{
                 "type":"Point",
                 "coordinates":[-99.17493458652294, 19.32867177512749]
@@ -20,7 +20,7 @@
         {
              
             "type":"Feature",
-            "properties":{"id":3, "name":"Psquiatría y Salud Mental", "key":"psiquiatria_y_salud_mental"},
+            "properties":{"id":3, "name":"Psquiatría y Salud Mental", "key":"psiquiatria_y_salud_mental", "photo":"/Imagenes/psiquiatria_y_salud_mental.jpg", "description":" "},
             "geometry":{
                 "type":"Point",
                 "coordinates":[-99.17831055922814, 19.332333544917315]
@@ -28,7 +28,7 @@
         },
         {
             "type":"Feature",
-            "properties":{"id":4, "name":"Facultad de Química", "key":"facultad_de_quimica"},
+            "properties":{"id":4, "name":"Facultad de Química", "key":"facultad_de_quimica", "photo":"/Imagenes/facultad_de_quimica.jpeg", "description":" "},
             "geometry":{
                 "type":"Point",
                 "coordinates":[-99.18074774453487, 19.330861471324795]
@@ -37,7 +37,7 @@
         {   
             
             "type":"Feature",
-            "properties":{"id":5, "name":"ENALLT Edificios A y B", "key":"enallt_edif_a_y_b"},
+            "properties":{"id":5, "name":"ENALLT Edificios A y B", "key":"enallt_edif_a_y_b", "photo":"/Imagenes/enallt_edif_a_y_b.jpeg", "description":" "},
             "geometry":{
                 "type":"Point",
                 "coordinates":[-99.18352674224433, 19.330757182446867]
@@ -46,7 +46,7 @@
         {
             
             "type":"Feature",
-            "properties":{"id":6, "name":"Facultad de Ingeniería", "key":"facultad_de_ingenieria"},
+            "properties":{"id":6, "name":"Facultad de Ingeniería", "key":"facultad_de_ingenieria", "photo":"/Imagenes/facultad_de_ingenieria.jpeg", "description":" "},
             "geometry":{
                 "type":"Point",
                 "coordinates":[-99.18455030591589, 19.33078888026645]
@@ -55,7 +55,7 @@
         {
             
             "type":"Feature",
-            "properties":{"id":7, "name":"Facultad de Arquitectura", "key":"facultad_de_arquitectura"},
+            "properties":{"id":7, "name":"Facultad de Arquitectura", "key":"facultad_de_arquitectura", "photo":"/Imagenes/facultad_de_arquitectura.jpeg"},
             "geometry":{
                 "type":"Point",
                 "coordinates":[-99.18681735253425, 19.33053527245542]
@@ -64,7 +64,7 @@
         {
             
             "type":"Feature",
-            "properties":{"id":8, "name":"Rectoría", "key":"rectoria"},
+            "properties":{"id":8, "name":"Rectoría", "key":"rectoria", "photo":"/Imagenes/rectoria.jpeg", "description":" "},
             "geometry":{
                 "type":"Point",
                 "coordinates":[-99.18938049381002, 19.332682438274443]
@@ -73,7 +73,7 @@
         {
             
             "type":"Feature",
-            "properties":{"id":9, "name":"Psicología", "key":"psicologia"},
+            "properties":{"id":9, "name":"Psicología", "key":"psicologia", "photo":"/Imagenes/psicologia.jpeg", "description":" "},
             "geometry":{
                 "type":"Point",
                 "coordinates":[-99.1891779010072, 19.334486851177573]
@@ -82,7 +82,7 @@
         {
              
             "type":"Feature",
-            "properties":{"id":10, "name":"Facultad de Filosofía", "key":"facultad_de_filosofia"},
+            "properties":{"id":10, "name":"Facultad de Filosofía", "key":"facultad_de_filosofia", "photo":"/Imagenes/facultad_de_filosofia.jpeg", "description":" "},
             "geometry":{
                 "type":"Point",
                 "coordinates":[-99.18668597769776, 19.33481723002121]
@@ -90,7 +90,7 @@
         },
         {
             "type":"Feature",
-            "properties":{"id":11, "name":"Facultad de Derecho", "key":"facultad_de_derecho"},
+            "properties":{"id":11, "name":"Facultad de Derecho", "key":"facultad_de_derecho", "photo":"/Imagenes/facultad_de_derecho.jpeg", "description":" "},
             "geometry":{
                 "type":"Point",
                 "coordinates":[-99.18479743277155, 19.335001954630506]
@@ -98,7 +98,7 @@
         },
         {
             "type":"Feature",
-            "properties":{"id":12, "name":"Facultad de Economía", "key":"facultad_de_economia"},
+            "properties":{"id":12, "name":"Facultad de Economía", "key":"facultad_de_economia", "photo":"/Imagenes/facultad_de_economia.jpeg", "description":" "},
             "geometry":{
                 "type":"Point",
                 "coordinates":[-99.18295023222451, 19.335066832131027]
@@ -106,7 +106,7 @@
         },
         {
             "type":"Feature",
-            "properties":{"id":13, "name":"Facultad de Odontología", "key":"facultad_de_odontologia"},
+            "properties":{"id":13, "name":"Facultad de Odontología", "key":"facultad_de_odontologia", "photo":"/Imagenes/facultad_de_odontologia.jpeg", "description":" "},
             "geometry":{
                 "type":"Point",
                 "coordinates":[-99.18070473537539, 19.3346873191377]
@@ -114,7 +114,7 @@
         },
         {
             "type":"Feature",
-            "properties":{"id":14, "name":"Facultad de Medicina", "key":"facultad_de_medicina"},
+            "properties":{"id":14, "name":"Facultad de Medicina", "key":"facultad_de_medicina", "photo":"/Imagenes/facultad_de_medicina.jpeg", "description":" "},
             "geometry":{
                 "type":"Point",
                 "coordinates":[-99.17881536483634, 19.33279922707437]
@@ -122,7 +122,7 @@
         },
         {   
             "type":"Feature",
-            "properties":{"id":15, "name":"Facultad de Veterinaria", "key":"facultad_de_veterinaria"},
+            "properties":{"id":15, "name":"Facultad de Veterinaria", "key":"facultad_de_veterinaria", "photo":"/Imagenes/facultad_de_veterinaria.jpg", "description":" "},
             "geometry":{
                 "type":"Point",
                 "coordinates":[-99.17564789188349, 19.329143121124304]
@@ -130,7 +130,7 @@
         },
         {
             "type":"Feature",
-            "properties":{"id":16, "name":"Instituto de GeoFísica", "key":"instituto_de_geofisica"},
+            "properties":{"id":16, "name":"Instituto de GeoFísica", "key":"instituto_de_geofisica", "photo":"/Imagenes/instituto_de_geofisica.jpg", "description":" "},
             "geometry":{
                 "type":"Point",
                 "coordinates":[-99.17509904222129, 19.326452527553528]
@@ -138,7 +138,7 @@
         },
         {
             "type":"Feature",
-            "properties":{"id":17, "name":"Química Conjunto D y E", "key":"quimica_conjunto_d_y_e"},
+            "properties":{"id":17, "name":"Química Conjunto D y E", "key":"quimica_conjunto_d_y_e", "photo":"/Imagenes/quimica_conjunto_d_y_e.jpg", "description":" "},
             "geometry":{
                 "type":"Point",
                 "coordinates":[-99.17745205245068, 19.322847651589186]
@@ -146,7 +146,7 @@
         },
         {
             "type":"Feature",
-            "properties":{"id":18, "name":"Facultad de Ciencias Alumnos", "key":"facultad_de_ciencias_alumnos"},
+            "properties":{"id":18, "name":"Facultad de Ciencias Alumnos", "key":"facultad_de_ciencias_alumnos", "photo":"/Imagenes/facultad_de_ciencias_alumnos.jpg", "description":" "},
             "geometry":{
                 "type":"Point",
                 "coordinates":[-99.17910736674192, 19.32260770476762]
@@ -154,7 +154,7 @@
         },
         {
             "type":"Feature",
-            "properties":{"id":19, "name":"Facultad de Ciencias Camino Verde", "key":"facultad_de_ciencias_camino_verde"},
+            "properties":{"id":19, "name":"Facultad de Ciencias Camino Verde", "key":"facultad_de_ciencias_camino_verde", "photo":"/Imagenes/facultad_de_ciencias_camino_verde.jpg", "description":" "},
             "geometry":{
                 "type":"Point",
                 "coordinates":[-99.18167721541181, 19.325467662330738]
@@ -162,7 +162,7 @@
         },
         {
             "type":"Feature",
-            "properties":{"id":20, "name":"Facultad de Contaduría y Administración", "key":"facultad_de_contaduria_y_administracion"},
+            "properties":{"id":20, "name":"Facultad de Contaduría y Administración", "key":"facultad_de_contaduria_y_administracion", "photo":"/Imagenes/facultad_de_contaduria_y_administracion.jpg", "description":" "},
             "geometry":{
                 "type":"Point",
                 "coordinates":[-99.18476739296108, 19.323601684575106]
@@ -170,7 +170,7 @@
         },
         {
             "type":"Feature",
-            "properties":{"id":21, "name":"Escuela de Trabajo Social", "key":"escuela_de_trabajo_social"},
+            "properties":{"id":21, "name":"Escuela de Trabajo Social", "key":"escuela_de_trabajo_social", "photo":"/Imagenes/escuela_de_trabajo_social.jpg", "description":" "},
             "geometry":{
                 "type":"Point",
                 "coordinates":[-99.18665131344781, 19.323248862567166]
@@ -178,7 +178,7 @@
         },
         {
             "type":"Feature",
-            "properties":{"id":22, "name":"Base MetroBus C.U.", "key":"base_metrobus_cu"},
+            "properties":{"id":22, "name":"Base MetroBus C.U.", "key":"base_metrobus_cu", "photo":"/Imagenes/base_metrobus_cu.jpg", "description":" "},
             "geometry":{
                 "type":"Point",
                 "coordinates":[-99.18767801901014, 19.32392264243004]
@@ -186,7 +186,7 @@
         },
         {
             "type":"Feature",
-            "properties":{"id":23, "name":"MetroBus C.U.", "key":"metrobus_cu"},
+            "properties":{"id":23, "name":"MetroBus C.U.", "key":"metrobus_cu", "photo":"/Imagenes/metrobus_cu.jpg", "description":" "},
             "geometry":{
                 "type":"Point",
                 "coordinates":[-99.18790840259003, 19.323699599263335]
@@ -194,7 +194,7 @@
         },
         {
             "type":"Feature",
-            "properties":{"id":24, "name":"Educación a Distancia", "key":"educacion_a_distancia"},
+            "properties":{"id":24, "name":"Educación a Distancia", "key":"educacion_a_distancia", "photo":"/Imagenes/educacion_a_distancia.jpg", "description":" "},
             "geometry":{
                 "type":"Point",
                 "coordinates":[-99.18688127183115, 19.322429202487246]
@@ -202,7 +202,7 @@
         },
         {
             "type":"Feature",
-            "properties":{"id":25, "name":"DGTIC", "key":"dgtic"},
+            "properties":{"id":25, "name":"DGTIC", "key":"dgtic", "photo":"/Imagenes/dgtic.jpg", "description":" "},
             "geometry":{
                 "type":"Point",
                 "coordinates":[-99.1846983514348, 19.32279442037251]
@@ -210,7 +210,7 @@
         },
         {   
             "type":"Feature",
-            "properties":{"id":26, "name":"Facultad de Ciencias", "key":"facultad_de_ciencias"},
+            "properties":{"id":26, "name":"Facultad de Ciencias", "key":"facultad_de_ciencias", "photo":"/Imagenes/facultad_de_ciencias.jpg", "description":" "},
             "geometry":{
                 "type":"Point",
                 "coordinates":[-99.17910846940873, 19.32223976707356]
@@ -218,7 +218,7 @@
         },
         {
             "type":"Feature",
-            "properties":{"id":27, "name":"Tienda UNAM 2", "key":"tienda_unam_ii"},
+            "properties":{"id":27, "name":"Tienda UNAM 2", "key":"tienda_unam_ii", "photo":"/Imagenes/tienda_unam_ii.jpg", "description":" "},
             "geometry":{
                 "type":"Point",
                 "coordinates":[-99.17632308253077, 19.320185173753984]
@@ -226,7 +226,7 @@
         },
         {
             "type":"Feature",
-            "properties":{"id":28, "name":"Facultad de Ciencias Políticas", "key":"facultad_de_ciencias_politicas"},
+            "properties":{"id":28, "name":"Facultad de Ciencias Políticas", "key":"facultad_de_ciencias_politicas", "photo":"/Imagenes/facultad_de_ciencias_politicas.jpg", "description":" "},
             "geometry":{
                 "type":"Point",
                 "coordinates":[-99.17639508514434, 19.317802904745616]
@@ -234,7 +234,7 @@
         },
         {
             "type":"Feature",
-            "properties":{"id":29, "name":"Investigaciones Jurídicas 2", "key":"investigaciones_juridicas_ii"},
+            "properties":{"id":29, "name":"Investigaciones Jurídicas 2", "key":"investigaciones_juridicas_ii", "photo":"/Imagenes/investigaciones_juridicas_ii.jpg", "description":" "},
             "geometry":{
                 "type":"Point",
                 "coordinates":[-99.18069198388326, 19.317218197466048]
@@ -242,7 +242,7 @@
         },
         {
             "type":"Feature",
-            "properties":{"id":30, "name":"Biblioteca Nacional 2", "key":"biblioteca_nacional_ii"},
+            "properties":{"id":30, "name":"Biblioteca Nacional 2", "key":"biblioteca_nacional_ii", "photo":"/Imagenes/biblioteca_nacional_ii.jpg", "description":" "},
             "geometry":{
                 "type":"Point",
                 "coordinates":[-99.18633922697651, 19.315460461540273]
@@ -250,7 +250,7 @@
         },
         {    
             "type":"Feature",
-            "properties":{"id":31, "name":"Zona Cultural", "key":"zona_cultural"},
+            "properties":{"id":31, "name":"Zona Cultural", "key":"zona_cultural", "photo":"/Imagenes/zona_cultural.jpg", "description":" "},
             "geometry":{
                 "type":"Point",
                 "coordinates":[-99.186274351807, 19.314609343779594]
@@ -258,7 +258,7 @@
         },
         {
             "type":"Feature",
-            "properties":{"id":32, "name":"Unidad de Posgrado", "key":"unidad_de_posgrado"},
+            "properties":{"id":32, "name":"Unidad de Posgrado", "key":"unidad_de_posgrado", "photo":"/Imagenes/unidad_de_posgrado.jpg", "description":" "},
             "geometry":{
                 "type":"Point",
                 "coordinates":[-99.18597483132639, 19.30911358214869]
@@ -266,7 +266,7 @@
         },
         {
             "type":"Feature",
-            "properties":{"id":33, "name":"Posgrado de Economía", "key":"posgrado_de_economia"},
+            "properties":{"id":33, "name":"Posgrado de Economía", "key":"posgrado_de_economia", "photo":"/Imagenes/posgrado_de_economia.jpg", "description":" "},
             "geometry":{
                 "type":"Point",
                 "coordinates":[-99.18584758066667, 19.311482129074964]
@@ -274,7 +274,7 @@
         },
         {
             "type":"Feature",
-            "properties":{"id":34, "name":"DGIRE", "key":"dgire"},
+            "properties":{"id":34, "name":"DGIRE", "key":"dgire", "photo":"/Imagenes/dgire.jpg", "description":" "},
             "geometry":{
                 "type":"Point",
                 "coordinates":[-99.18486134442516, 19.31180073006947]
@@ -282,7 +282,7 @@
         },
         {
             "type":"Feature",
-            "properties":{"id":35, "name":"DGAPA", "key":"dgapa"},
+            "properties":{"id":35, "name":"DGAPA", "key":"dgapa", "photo":"/Imagenes/dgapa.jpg", "description":" "},
             "geometry":{
                 "type":"Point",
                 "coordinates":[-99.18213900106853, 19.31079398231468]
@@ -290,7 +290,7 @@
         },
         {
             "type":"Feature",
-            "properties":{"id":36, "name":"Archivo General", "key":"archivo_general"},
+            "properties":{"id":36, "name":"Archivo General", "key":"archivo_general", "photo":"/Imagenes/archivo_general.jpg", "description":" "},
             "geometry":{
                 "type":"Point",
                 "coordinates":[-99.18038801295758, 19.30984345225467]
@@ -298,7 +298,7 @@
         },
         {
             "type":"Feature",
-            "properties":{"id":37, "name":"Avenida IMAN", "key":"avenida_iman"},
+            "properties":{"id":37, "name":"Avenida IMAN", "key":"avenida_iman", "photo":"/Imagenes/avenida_iman.jpg", "description":" "},
             "geometry":{
                 "type":"Point",
                 "coordinates":[-99.18012031104269, 19.308123215750424]
@@ -306,7 +306,7 @@
         },
         {
             "type":"Feature",
-            "properties":{"id":38, "name":"Investigaciones Filosóficas", "key":"investigaciones_filosoficas"},
+            "properties":{"id":38, "name":"Investigaciones Filosóficas", "key":"investigaciones_filosoficas", "photo":"/Imagenes/investigaciones_filosoficas.jpg", "description":" "},
             "geometry":{
                 "type":"Point",
                 "coordinates":[-99.1801171707444, 19.31397282741573]
@@ -314,7 +314,7 @@
         },
         {
            "type":"Feature",
-            "properties":{"id":39, "name":"Investigaciones Filológicas", "key":"investigaciones_filologicas"},
+            "properties":{"id":39, "name":"Investigaciones Filológicas", "key":"investigaciones_filologicas", "photo":"/Imagenes/investigaciones_filologicas.jpg", "description":" "},
             "geometry":{
                 "type":"Point",
                 "coordinates":[-99.18104828266812, 19.314056590340748]
@@ -322,7 +322,7 @@
         },
         {
             "type":"Feature",
-            "properties":{"id":40, "name":"Coordinación de Humanidades", "key":"coordinacion_de_humanidades"},
+            "properties":{"id":40, "name":"Coordinación de Humanidades", "key":"coordinacion_de_humanidades", "photo":"/Imagenes/coordinacion_de_humanidades.jpg", "description":" "},
             "geometry":{
                 "type":"Point",
                 "coordinates":[-99.18150388554682, 19.314111931909903]
@@ -330,7 +330,7 @@
         },
         {
             "type":"Feature",
-            "properties":{"id":41, "name":"UNIVERSUM", "key":"universum"},
+            "properties":{"id":41, "name":"UNIVERSUM", "key":"universum", "photo":"/Imagenes/universum.jpg", "description":" "},
             "geometry":{
                 "type":"Point",
                 "coordinates":[-99.182156764627, 19.311707714861647]
@@ -338,7 +338,7 @@
         },
         {    
             "type":"Feature",
-            "properties":{"id":42, "name":"Teatro y Danza", "key":"teatro_y_danza"},
+            "properties":{"id":42, "name":"Teatro y Danza", "key":"teatro_y_danza", "photo":"/Imagenes/teatro_y_danza.jpg", "description":" "},
             "geometry":{
                 "type":"Point",
                 "coordinates":[-99.18463987808958, 19.31197906442161]
@@ -346,7 +346,7 @@
         },
         {
             "type":"Feature",
-            "properties":{"id":43, "name":"MUAC", "key":"muac"},
+            "properties":{"id":43, "name":"MUAC", "key":"muac", "photo":"/Imagenes/MUAC.jpg", "description":" "},
             "geometry":{
                 "type":"Point",
                 "coordinates":[-99.1859829933326, 19.314585063063767]
@@ -354,7 +354,7 @@
         },
         {
             "type":"Feature",
-            "properties":{"id":44, "name":"Biblioteca Nacional", "key":"biblioteca_nacional"},
+            "properties":{"id":44, "name":"Biblioteca Nacional", "key":"biblioteca_nacional", "photo":"/Imagenes/biblioteca_nacional.jpg", "description":" "},
             "geometry":{
                 "type":"Point",
                 "coordinates":[-99.18611783941972, 19.31577886919527]
@@ -362,7 +362,7 @@
         },
         {
             "type":"Feature",
-            "properties":{"id":45, "name":"Espacio Escultórico", "key":"espacio_escultorico"},
+            "properties":{"id":45, "name":"Espacio Escultórico", "key":"espacio_escultorico", "photo":"/Imagenes/espacio_escultorico.jpg", "description":" "},
             "geometry":{
                 "type":"Point",
                 "coordinates":[-99.18362788997031, 19.317337365986276]
@@ -370,7 +370,7 @@
         },
         {
             "type":"Feature",
-            "properties":{"id":46, "name":"Investigaciones Jurídicas", "key":"investigaciones_juridicas"},
+            "properties":{"id":46, "name":"Investigaciones Jurídicas", "key":"investigaciones_juridicas", "photo":"/Imagenes/investigaciones_juridicas.jpg", "description":" "},
             "geometry":{
                 "type":"Point",
                 "coordinates":[-99.18045606895261, 19.316870597327274]
@@ -378,7 +378,7 @@
         },
         {
             "type":"Feature",
-            "properties":{"id":47, "name":"T.V. UNAM", "key":"tv_unam"},
+            "properties":{"id":47, "name":"T.V. UNAM", "key":"tv_unam", "photo":"/Imagenes/tv_unam.jpg", "description":" "},
             "geometry":{
                 "type":"Point",
                 "coordinates":[-99.17628277957256, 19.31758931573532]
@@ -386,7 +386,7 @@
         },
         {
             "type":"Feature",
-            "properties":{"id":48, "name":"CUEC", "key":"cuec"},
+            "properties":{"id":48, "name":"CUEC", "key":"cuec", "photo":"/Imagenes/CUEC.jpg", "description":" "},
             "geometry":{
                 "type":"Point",
                 "coordinates":[-99.17579067925219, 19.3188980189485]
@@ -394,7 +394,7 @@
         },
         {
             "type":"Feature",
-            "properties":{"id":49, "name":"DGSA", "key":"dgsa"},
+            "properties":{"id":49, "name":"DGSA", "key":"dgsa", "photo":"/Imagenes/DGSA.jpg", "description":" "},
             "geometry":{
                 "type":"Point",
                 "coordinates":[-99.17609293007042, 19.320414615891963]
@@ -402,7 +402,7 @@
         },
         {
             "type":"Feature",
-            "properties":{"id":50, "name":"Tienda UNAM", "key":"tienda_unam"},
+            "properties":{"id":50, "name":"Tienda UNAM", "key":"tienda_unam", "photo":"/Imagenes/tienda_unam.jpg", "description":" "},
             "geometry":{
                 "type":"Point",
                 "coordinates":[-99.1762718010574, 19.32127283133318]
@@ -410,7 +410,7 @@
         },
         {
             "type":"Feature",
-            "properties":{"id":51, "name":"Estadio de Prácticas", "key":"estadio_de_practicas"},
+            "properties":{"id":51, "name":"Estadio de Prácticas", "key":"estadio_de_practicas", "photo":"/Imagenes/estadio_de_practicas.jpg", "description":" "},
             "geometry":{
                 "type":"Point",
                 "coordinates":[-99.18807980879998, 19.32672783545298]
@@ -418,7 +418,7 @@
         },
         {
             "type":"Feature",
-            "properties":{"id":52, "name":"Campos de Fútbol I", "key":"campos_de_futbol_i"},
+            "properties":{"id":52, "name":"Campos de Fútbol I", "key":"campos_de_futbol_i", "photo":"/Imagenes/campos_de_futbol_i.jpg", "description":" "},
             "geometry":{
                 "type":"Point",
                 "coordinates":[-99.19216461535925, 19.32400101771509]
@@ -426,7 +426,7 @@
         },
         {
             "type":"Feature",
-            "properties":{"id":53, "name":"Jardin Botánico", "key":"jardin_botanico"},
+            "properties":{"id":53, "name":"Jardin Botánico", "key":"jardin_botanico", "photo":"/Imagenes/jardin_botanico.jpg", "description":" "},
             "geometry":{
                 "type":"Point",
                 "coordinates":[-99.19303569233554, 19.321304631168353]
@@ -434,7 +434,7 @@
         },
         {
             "type":"Feature",
-            "properties":{"id":54, "name":"Campos de Fútbol II", "key":"campos_de_futbol_ii"},
+            "properties":{"id":54, "name":"Campos de Fútbol II", "key":"campos_de_futbol_ii", "photo":"/Imagenes/campos_de_futbol_ii.jpg", "description":" "},
             "geometry":{
                 "type":"Point",
                 "coordinates":[-99.1920570425104, 19.323273385434817]
@@ -442,7 +442,7 @@
         },
         {
             "type":"Feature",
-            "properties":{"id":55, "name":"Medicina", "key":"medicina"},
+            "properties":{"id":55, "name":"Medicina", "key":"medicina", "photo":"/Imagenes/Medicina.jpg", "description":" "},
             "geometry":{
                 "type":"Point",
                 "coordinates":[-99.17981047062281, 19.334561544013752]
@@ -450,7 +450,7 @@
         },
         {
             "type":"Feature",
-            "properties":{"id":56, "name":"Odontología", "key":"odontologia"},
+            "properties":{"id":56, "name":"Odontología", "key":"odontologia", "photo":"/Imagenes/Odontologia.jpg", "description":" "},
             "geometry":{
                 "type":"Point",
                 "coordinates":[-99.18080122172354, 19.3348633239412]
@@ -458,7 +458,7 @@
         },
         {
             "type":"Feature",
-            "properties":{"id":57, "name":"Economía", "key":"economia"},
+            "properties":{"id":57, "name":"Economía", "key":"economia", "photo":"/Imagenes/Economia.jpg", "description":" "},
             "geometry":{
                 "type":"Point",
                 "coordinates":[-99.18297234388939, 19.335579066239344]
@@ -466,7 +466,7 @@
         },
         {
             "type":"Feature",
-            "properties":{"id":58, "name":"Av. Universidad", "key":"av_universidad"},
+            "properties":{"id":58, "name":"Av. Universidad", "key":"av_universidad", "photo":"/Imagenes/av_universidad.jpg", "description":" "},
             "geometry":{
                 "type":"Point",
                 "coordinates":[-99.18572997595162, 19.33621540938498]
@@ -474,7 +474,7 @@
         },
         {
             "type":"Feature",
-            "properties":{"id":59, "name":"Derecho", "key":"derecho"},
+            "properties":{"id":59, "name":"Derecho", "key":"derecho", "photo":"/Imagenes/Derecho.jpg", "description":" "},
             "geometry":{
                 "type":"Point",
                 "coordinates":[-99.18476070937763, 19.33536696154901]
@@ -482,7 +482,7 @@
         },
         {
             "type":"Feature",
-            "properties":{"id":60, "name":"Filosofía", "key":"filosofia"},
+            "properties":{"id":60, "name":"Filosofía", "key":"filosofia", "photo":"/Imagenes/Filosofia.jpg", "description":" "},
             "geometry":{
                 "type":"Point",
                 "coordinates":[-99.18724035651945, 19.334947452531637]
@@ -490,7 +490,7 @@
         },
         {
             "type":"Feature",
-            "properties":{"id":61, "name":"Facultad de Psicología", "key":"facultad_de_psicologia"},
+            "properties":{"id":61, "name":"Facultad de Psicología", "key":"facultad_de_psicologia", "photo":"/Imagenes/facultad_de_psicologia.jpg", "description":" "},
             "geometry":{
                 "type":"Point",
                 "coordinates":[-99.18916750132115, 19.33464652476855]
@@ -498,7 +498,7 @@
         },
         {
             "type":"Feature",
-            "properties":{"id":62, "name":"Base Estadio Oímpico", "key":"base_estadio_olimpico"},
+            "properties":{"id":62, "name":"Base Estadio Oímpico", "key":"base_estadio_olimpico", "photo":"/Imagenes/base_estadio_olimpico.png", "description":" "},
             "geometry":{
                 "type":"Point",
                 "coordinates":[-99.19058023081736, 19.33355250214342]
@@ -506,7 +506,7 @@
         },
         {
             "type":"Feature",
-            "properties":{"id":63, "name":"Pumitas I", "key":"pumitas_i"},
+            "properties":{"id":63, "name":"Pumitas I", "key":"pumitas_i", "photo":"/Imagenes/pumitas_i.jpg", "description":" "},
             "geometry":{
                 "type":"Point",
                 "coordinates":[-99.19425945771191, 19.32454430016486]
@@ -514,7 +514,7 @@
         },
         {
             "type":"Feature",
-            "properties":{"id":64, "name":"Pista de Calentamiento I", "key":"pista_de_calentamiento_i"},
+            "properties":{"id":64, "name":"Pista de Calentamiento I", "key":"pista_de_calentamiento_i", "photo":"/Imagenes/pista_de_calentamiento_i.jpg", "description":" "},
             "geometry":{
                 "type":"Point",
                 "coordinates":[-99.19434284496265, 19.326260698396567]
@@ -522,7 +522,7 @@
         },
         {
             "type":"Feature",
-            "properties":{"id":65, "name":"Pista de Calentamiento II", "key":"pista_de_calentamiento_ii"},
+            "properties":{"id":65, "name":"Pista de Calentamiento II", "key":"pista_de_calentamiento_ii", "photo":"/Imagenes/pista_de_calentamiento_ii.jpg", "description":" "},
             "geometry":{
                 "type":"Point",
                 "coordinates":[-99.19486963986184, 19.326384894364875]
@@ -530,7 +530,7 @@
         },
         {
             "type":"Feature",
-            "properties":{"id":66, "name":"Pumitas II", "key":"pumitas_ii"},
+            "properties":{"id":66, "name":"Pumitas II", "key":"pumitas_ii", "photo":"/Imagenes/pumitas_ii.jpg", "description":" "},
             "geometry":{
                 "type":"Point",
                 "coordinates":[-99.19486779170663, 19.324465236222522]
@@ -538,7 +538,7 @@
         },
         {
             "type":"Feature",
-            "properties":{"id":67, "name":"Investigaciones Biomédicas", "key":"investigaciones_biomedicas"},
+            "properties":{"id":67, "name":"Investigaciones Biomédicas", "key":"investigaciones_biomedicas", "photo":"/Imagenes/investigaciones_biomedicas.jpg", "description":" "},
             "geometry":{
                 "type":"Point",
                 "coordinates":[-99.18966060930507, 19.323139883568956]
@@ -546,7 +546,7 @@
         },
         {
             "type":"Feature",
-            "properties":{"id":68, "name":"MetroBús C.U. 2", "key":"base_metrobus_cu_ii"},
+            "properties":{"id":68, "name":"MetroBús C.U. 2", "key":"base_metrobus_cu_ii", "photo":"/Imagenes/base_metrobus_cu_ii.jpg", "description":" "},
             "geometry":{
                 "type":"Point",
                 "coordinates":[-99.18945493628961, 19.3241231684714]
@@ -554,7 +554,7 @@
         },
         {
             "type":"Feature",
-            "properties":{"id":69, "name":"Facultad de Ciencias Profesores", "key":"facultad_de_ciencias_profesores"},
+            "properties":{"id":69, "name":"Facultad de Ciencias Profesores", "key":"facultad_de_ciencias_profesores", "photo":"/Imagenes/facultad_de_ciencias_profesores.jpg", "description":" "},
             "geometry":{
                 "type":"Point",
                 "coordinates":[-99.1817437236714, 19.32489580605315]
@@ -562,7 +562,7 @@
         },
         {
             "type":"Feature",
-            "properties":{"id":70, "name":"Investigación Científica", "key":"investigacion_cientifica"},
+            "properties":{"id":70, "name":"Investigación Científica", "key":"investigacion_cientifica", "photo":"/Imagenes/investigacion_cientifica.jpg", "description":" "},
             "geometry":{
                 "type":"Point",
                 "coordinates":[-99.18048909652605, 19.326453876107756]
@@ -570,7 +570,7 @@
         },
         {
             "type":"Feature",
-            "properties":{"id":71, "name":"Ciencias del Mar", "key":"ciencias_del_mar"},
+            "properties":{"id":71, "name":"Ciencias del Mar", "key":"ciencias_del_mar", "photo":"/Imagenes/ciencias_del_mar.jpg", "description":" "},
             "geometry":{
                 "type":"Point",
                 "coordinates":[-99.17921514494337, 19.328664546784882]
@@ -578,7 +578,7 @@
         },
         {
             "type":"Feature",
-            "properties":{"id":72, "name":"Invernadero", "key":"invernadero"},
+            "properties":{"id":72, "name":"Invernadero", "key":"invernadero", "photo":"/Imagenes/Invernadero.jpg", "description":" "},
             "geometry":{
                 "type":"Point",
                 "coordinates":[-99.17991569903445, 19.328981666674387]
@@ -586,7 +586,7 @@
         },
         {
             "type":"Feature",
-            "properties":{"id":73, "name":"Anexo de Ingeniería", "key":"anexo_de_ingenieria"},
+            "properties":{"id":73, "name":"Anexo de Ingeniería", "key":"anexo_de_ingenieria", "photo":"/Imagenes/anexo_de_ingenieria.jpg",  "description":" "},
             "geometry":{
                 "type":"Point",
                 "coordinates":[-99.1810076496311, 19.3269898192432]
@@ -594,7 +594,7 @@
         },
         {
            "type":"Feature",
-            "properties":{"id":74, "name":"Camino Verde", "key":"camino_verde"},
+            "properties":{"id":74, "name":"Camino Verde", "key":"camino_verde", "photo":"/Imagenes/camino_verde.jpg", "description":" "},
             "geometry":{
                 "type":"Point",
                 "coordinates":[-99.181982906496, 19.325626409639046]
@@ -602,7 +602,7 @@
         },
         {
             "type":"Feature",
-            "properties":{"id":75, "name":"MUCA", "key":"muca"},
+            "properties":{"id":75, "name":"MUCA", "key":"muca", "photo":"/Imagenes/MUCA.jpg", "description":" "},
             "geometry":{
                 "type":"Point",
                 "coordinates":[-99.18902084247291, 19.33028916808167]
@@ -610,7 +610,7 @@
         },
         {
             "type":"Feature",
-            "properties":{"id":76, "name":"Estacionamiento 8", "key":"estacionamiento_8"},
+            "properties":{"id":76, "name":"Estacionamiento 8", "key":"estacionamiento_8", "photo":"/Imagenes/estacionamiento_8.jpg", "description":" "},
             "geometry":{
                 "type":"Point",
                 "coordinates":[-99.19049230630668, 19.330030756875157]
@@ -618,7 +618,7 @@
         },
         {
             "type":"Feature",
-            "properties":{"id":77, "name":"Estacionamiento 7", "key":"estacionamiento_7"},
+            "properties":{"id":77, "name":"Estacionamiento 7", "key":"estacionamiento_7", "photo":"/Imagenes/estacionamiento_7.jpg", "description":" "},
             "geometry":{
                 "type":"Point",
                 "coordinates":[-99.19240309702003, 19.329140142205326]
@@ -626,7 +626,7 @@
         },
         {
             "type":"Feature",
-            "properties":{"id":78, "name":"Estacionamiento 6", "key":"estacionamiento_6"},
+            "properties":{"id":78, "name":"Estacionamiento 6", "key":"estacionamiento_6", "photo":"/Imagenes/estacionamiento_6.jpg", "description":" "},
             "geometry":{
                 "type":"Point",
                 "coordinates":[-99.19339023105668, 19.330280763392594]
@@ -634,7 +634,7 @@
         },
         {
             "type":"Feature",
-            "properties":{"id":79, "name":"Estacionamiento 4", "key":"estacionamiento_4"},
+            "properties":{"id":79, "name":"Estacionamiento 4", "key":"estacionamiento_4", "photo":"/Imagenes/estacionamiento_4.jpg", "description":" "},
             "geometry":{
                 "type":"Point",
                 "coordinates":[-99.1941587474729, 19.33124885920721]
@@ -642,7 +642,7 @@
         },
         {
             "type":"Feature",
-            "properties":{"id":80, "name":"Estacionamiento 3", "key":"estacionamiento_3"},
+            "properties":{"id":80, "name":"Estacionamiento 3", "key":"estacionamiento_3", "photo":"/Imagenes/estacionamiento_3.jpg", "description":" "},
             "geometry":{
                 "type":"Point",
                 "coordinates":[-99.19461834091832, 19.332609410784254]
@@ -650,7 +650,7 @@
         },
         {
             "type":"Feature",
-            "properties":{"id":81, "name":"Estacionamiento 2", "key":"estacionamiento_2"},
+            "properties":{"id":81, "name":"Estacionamiento 2", "key":"estacionamiento_2", "photo":"/Imagenes/estacionamiento_2.jpg", "description":" "},
             "geometry":{
                 "type":"Point",
                 "coordinates":[-99.19324780333808, 19.33348081246311]
@@ -658,7 +658,7 @@
         },
         {
             "type":"Feature",
-            "properties":{"id":82, "name":"Centro Médico", "key":"centro_medico"},
+            "properties":{"id":82, "name":"Centro Médico", "key":"centro_medico", "photo":"/Imagenes/centro_medico.jpg", "description":" "},
             "geometry":{
                 "type":"Point",
                 "coordinates":[-99.18774630689238, 19.33016628976296]
@@ -666,7 +666,7 @@
         },
         {
             "type":"Feature",
-            "properties":{"id":83, "name":"Alberca", "key":"alberca"},
+            "properties":{"id":83, "name":"Alberca", "key":"alberca", "photo":"/Imagenes/alberca.jpg", "description":" "},
             "geometry":{
                 "type":"Point",
                 "coordinates":[-99.18629874942249, 19.330423004131465]
@@ -674,7 +674,7 @@
         },
         {
             "type":"Feature",
-            "properties":{"id":84, "name":"Ingeniería", "key":"ingenieria"},
+            "properties":{"id":84, "name":"Ingeniería", "key":"ingenieria", "photo":"/Imagenes/Ingenieria.jpg", "description":" "},
             "geometry":{
                 "type":"Point",
                 "coordinates":[-99.18462723347668, 19.33053691910285]
@@ -682,7 +682,7 @@
         },
         {
             "type":"Feature",
-            "properties":{"id":85, "name":"Frontones", "key":"frontones"},
+            "properties":{"id":85, "name":"Frontones", "key":"frontones", "photo":"/Imagenes/Frontones.jpg", "description":" "},
             "geometry":{
                 "type":"Point",
                 "coordinates":[-99.18303461897696, 19.33050849134825]
@@ -690,7 +690,7 @@
         },
         {
             "type":"Feature",
-            "properties":{"id":86, "name":"IIMAS", "key":"iimas"},
+            "properties":{"id":86, "name":"IIMAS", "key":"iimas", "photo":"/Imagenes/IIMAS.jpg", "description":" "},
             "geometry":{
                 "type":"Point",
                 "coordinates":[-99.1807727722108, 19.33063689584268]
@@ -698,7 +698,7 @@
         },
         {
             "type":"Feature",
-            "properties":{"id":87, "name":"Relaciones Laborales", "key":"relaciones_laborales"},
+            "properties":{"id":87, "name":"Relaciones Laborales", "key":"relaciones_laborales", "photo":"/Imagenes/relaciones_laborales.jpg", "description":" "},
             "geometry":{
                 "type":"Point",
                 "coordinates":[-99.19104679580627, 19.334262363511804]
@@ -706,7 +706,7 @@
         },
         {
             "type":"Feature",
-            "properties":{"id":88, "name":"Dirección General de Obras / Proveeduría", "key":"direccion_general_de_obras/proveeduria"},
+            "properties":{"id":88, "name":"Dirección General de Obras / Proveeduría", "key":"direccion_general_de_obras/proveeduria", "photo":"/Imagenes/direccion_general_de_obras.jpg", "description":" "},
             "geometry":{
                 "type":"Point",
                 "coordinates":[-99.19294352362702, 19.33505490715057]
@@ -714,7 +714,7 @@
         },
         {
             "type":"Feature",
-            "properties":{"id":89, "name":"AAPAUNAM", "key":"aapaunam"},
+            "properties":{"id":89, "name":"AAPAUNAM", "key":"aapaunam", "photo":"/Imagenes/AAPAUNAM.jpg", "description":" "},
             "geometry":{
                 "type":"Point",
                 "coordinates":[-99.1953239574339, 19.33435558318699]
@@ -722,7 +722,7 @@
         },
         {
             "type":"Feature",
-            "properties":{"id":90, "name":"Posgrado de Filosofía", "key":"posgrado_de_filosofia"},
+            "properties":{"id":90, "name":"Posgrado de Filosofía", "key":"posgrado_de_filosofia", "photo":"/Imagenes/posgrado_de_filosofia.jpg", "description":" "},
             "geometry":{
                 "type":"Point",
                 "coordinates":[-99.19628088026104, 19.332665401215912]
@@ -730,7 +730,7 @@
         },
         {
             "type":"Feature",
-            "properties":{"id":91, "name":"Anexo de Filosofía", "key":"anexo_de_filosofia"},
+            "properties":{"id":91, "name":"Anexo de Filosofía", "key":"anexo_de_filosofia", "photo":"/Imagenes/AAPAUNAM.jpg", "description":" "},
             "geometry":{
                 "type":"Point",
                 "coordinates":[-99.19609363724416, 19.332353423830714]
