@@ -13,6 +13,7 @@ int main() {
     httplib::Server svr;
 
     
+<<<<<<< HEAD
 svr.Options("/ruta", [](const httplib::Request&, httplib::Response& res) {
     res.set_header("Access-Control-Allow-Origin", "*");
     res.set_header("Access-Control-Allow-Methods", "POST, OPTIONS");
@@ -31,6 +32,33 @@ svr.Post("/ruta", [](const httplib::Request& req, httplib::Response& res) {
                 res.set_header("Access-Control-Allow-Origin", "*");
                 res.set_content("Estación no válida", "text/plain");
                 return;
+=======
+    cout << "Ingrese la estacion en la que se encuentra: ";
+    cin >> station;
+    if(m.find(station) == m.end()) {
+        cout << "estacion no valida";
+        return -1;
+    }
+    
+    shortest_routes = dijkstra(92, m[station], adj);
+    
+    cout << "A que estacion quieres llegar?: ";
+    cin >> station2;
+    if(m.find(station2) == m.end()) {
+        cout << "estacion no valida";
+        return -1;
+    }
+    
+    for(auto i : shortest_routes[m[station2]]) {
+        for(auto &j : m) {
+            if(j.second == i) {
+                cout << j.first << " - ruta(s)[";
+                vector<int> rt = routes[j.first];
+                for(auto i : rt) {
+                    cout << i << ", ";
+                }
+                cout << "]\n";
+>>>>>>> c2488e8707e2276e8055fba152831e42071dd888
             }
 
             // Ejecutar Dijkstra
