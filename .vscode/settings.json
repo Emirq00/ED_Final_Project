@@ -1,5 +1,6 @@
 {
     "files.associations": {
+        "*.dbclient-js": "javascript",
         "tuple": "cpp",
         "vector": "cpp",
         "iostream": "cpp",
@@ -92,6 +93,13 @@
         "typeindex": "cpp",
         "typeinfo": "cpp",
         "valarray": "cpp",
-        "variant": "cpp"
+        "variant": "cpp",
+<<<<<<< HEAD
+        "xhash": "cpp"
+    },
+    "C_Cpp.errorSquiggles": "enabled"
+=======
+        "queue": "cpp"
     }
+>>>>>>> 24893dcc8e996f80133a77257f35afa26ef84585
 }

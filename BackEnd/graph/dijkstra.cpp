@@ -9,6 +9,8 @@
 using namespace std;
 
 vector<vector<int>> dijkstra(int v, int source, vector<vector<pair<int,int>>>& adj) {
+    //Reiniciar dist
+    dist.assign(v+1, INT_MAX);
     priority_queue<pair<int,int>, vector<pair<int,int>>, greater<pair<int,int>>> pq;
     vector<vector<int>> nodes(v+1);
     
@@ -35,5 +37,6 @@ vector<vector<int>> dijkstra(int v, int source, vector<vector<pair<int,int>>>& a
             }
         }
     }
+    
     return nodes;
 }
