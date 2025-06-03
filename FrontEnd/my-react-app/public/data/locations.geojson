@@ -8,7 +8,7 @@
                 "name": "Base Metro Universidad",
                 "key": "base_metro_universidad",
                 "photo": "/Imagenes/base_metro_universidad.jpg",
-                "description": "",
+                "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tincidunt  nulla id nisi convallis, vitae rutrum dolor maximus. Aenean viverra  suscipit semper. Fusce vel posuere dui. Duis commodo justo ante, non  consequat massa fringilla iaculis. Ut molestie vestibulum ornare...",
                 "routes": [1, 2, 3, 4, 5]
             },
             "geometry": {

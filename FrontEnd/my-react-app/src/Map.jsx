@@ -173,7 +173,6 @@ export default function Map() {
     setSelectedFeature(null);
   };
 
-  
   async function fetchRouteGeometry(waypoints) {
     if (!waypoints || waypoints.length < 2) {
       throw new Error("Se requieren al menos 2 puntos para calcular la ruta");
@@ -191,7 +190,7 @@ export default function Map() {
     if (!json.routes || json.routes.length === 0) {
       throw new Error("Mapbox Directions no devolvió rutas");
     }
-    return json.routes[0]; // retorna objeto con geometry, distance (en metros) y duration (en segundos)
+    return json.routes[0]; 
   }
 
   const finalizeRoute = () => {
@@ -385,15 +384,17 @@ export default function Map() {
     const hrs = Math.floor(seconds / 3600);
     const mins = Math.ceil((seconds % 3600) / 60);
     if (hrs > 0) {
-      return `${hrs}h ${mins} m`;
+      return `${hrs}h ${mins} min.`;
     }
     return `${mins}m`;
   };
 
   return (
     <>
+  
       <div ref={mapContainer} style={{ position: 'absolute', top: 0, bottom: 0, width: '100%' }} />
 
+      
       <div style={{ position: 'relative', zIndex: 1000, display: 'flex', justifyContent: 'space-around', padding: '1em' }}>
         <div style={{ position: 'relative', display: 'flex' }}>
           <SearchBox
@@ -426,13 +427,14 @@ export default function Map() {
               backgroundColor: '#002B7A',
               color: '#D59F0F',
               fontWeight:'bold',
-
               border: 'none',
               borderRadius: '4px',
               cursor: mainDisabled ? 'not-allowed' : 'pointer',
               opacity: mainOpacity,
             }}
-          >{mainText}</button>
+          >
+            {mainText}
+          </button>
         </div>
       </div>
 
@@ -455,6 +457,7 @@ export default function Map() {
         </div>
       )}
 
+      
       <div style={{
         position: 'fixed',
         bottom: '3%',
@@ -478,7 +481,9 @@ export default function Map() {
                 cursor: tempSelection ? 'pointer' : 'not-allowed',
                 fontWeight: 'bold'
               }}
-            >Seleccionar</button>
+            >
+              Seleccionar
+            </button>
             <button
               onClick={() => {
                 setOrigin(null);
@@ -498,7 +503,9 @@ export default function Map() {
                 cursor: 'pointer',
                 fontWeight: 'bold'
               }}
-            >Cancelar</button>
+            >
+              Cancelar
+            </button>
           </>
         )}
 
@@ -516,7 +523,9 @@ export default function Map() {
                 cursor: 'pointer',
                 fontWeight: 'bold'
               }}
-            >{isRouteActive ? 'Finalizar' : 'Confirmar ruta'}</button>
+            >
+              {isRouteActive ? 'Finalizar' : 'Confirmar ruta'}
+            </button>
             <button
               onClick={() => {
                 setOrigin(null);
@@ -537,10 +546,13 @@ export default function Map() {
                 cursor: 'pointer',
                 fontWeight: 'bold'
               }}
-            >Cancelar</button>
+            >
+              Cancelar
+            </button>
           </>
         )}
       </div>
+
 
       <div
         style={{
@@ -560,12 +572,12 @@ export default function Map() {
           transition: 'transform 0.5s ease-in-out',
           zIndex: 1001,
           padding: '1rem',
-          overflowY: 'auto',
+          display: 'flex',
+          flexDirection: 'column',
         }}
       >
         {routeSteps ? (
           <>
-            
             <div style={{
               marginBottom: '1rem',
               padding: '0.5rem',
@@ -575,25 +587,28 @@ export default function Map() {
               justifyContent: 'space-between',
               alignItems: 'center',
             }}>
-              <div style={{display:'flex', flexDirection:'column'}}>
-                <div style={{padding:'auto', paddingBottom:'1em', display:'flex'}}>
-                  <strong style={{ color: '#D59F0F'  }}>Distancia recorrida:</strong>
-                  <span style={{ marginLeft: '0.2rem', color: '#002B7A', fontWeight:'500'}}>
+              <div style={{ display: 'flex', flexDirection: 'column' }}>
+                <div style={{ padding: 'auto', paddingBottom: '1em', display: 'flex' }}>
+                  <strong style={{ color: '#D59F0F' }}>Distancia recorrida:</strong>
+                  <span style={{ marginLeft: '0.2rem', color: '#002B7A', fontWeight: '500' }}>
                     {formatDistance(routeDistance)}
                   </span>
                 </div>
-                <div style={{display:'flex'}}>
+                <div style={{ display: 'flex' }}>
                   <strong style={{ color: '#D59F0F' }}>Tiempo estimado:</strong>
-                  <span style={{ marginLeft: '0.2rem', color: '#002B7A', fontWeight:'500' }}>
+                  <span style={{ marginLeft: '0.2rem', color: '#002B7A', fontWeight: '500' }}>
                     {formatDuration(routeDuration)}
                   </span>
                 </div>
               </div>
-              
             </div>
-            
 
-            <h3 style={{ margin: '0 0 1rem 0', fontSize: '1.25rem', fontWeight: 'bold', color: '#D59F0F' }}>
+            <h3 style={{
+              margin: '0 0 1rem 0',
+              fontSize: '1.25rem',
+              fontWeight: 'bold',
+              color: '#D59F0F'
+            }}>
               Ruta óptima
             </h3>
             <ul style={{ listStyle: 'none', margin: 0, padding: 0 }}>
@@ -627,66 +642,110 @@ export default function Map() {
           </>
         ) : selectedFeature ? (
           <>
-            <button
-              onClick={() => { setSelectedFeature(null); setTempSelection(null); }}
-              style={{
-                position: 'absolute',
-                top: 8,
-                right: 12,
-                background: 'transparent',
-                border: 'none',
-                fontSize: '2rem',
-                cursor: 'pointer',
-                color: 'black'
-              }}
-            >×</button>
-            <h3 style={{
-              margin: 0,
-              fontSize: '1.25rem',
-              fontWeight: 'bold',
-              color: '#D59F0F',
-              padding: '1em'
-            }}>
-              {selectedFeature.properties.name}
-            </h3>
-            
-            {selectedFeature.properties.photo && (
-              <img
-                src={selectedFeature.properties.photo}
-                alt={selectedFeature.properties.name}
-                style={{
-                  width: '100%',
-                  height: '120px',
-                  objectFit: 'cover',
-                  borderRadius: '8px',
-                  border:'2px solid #D59F0F',
-                  zIndex:'10000',
-                  cursor:'pointer'
-                }}
-                onClick={() => setIsImageOpen(true)}
-              />
-            )}
 
-            
-            <div style={{
-              position: 'absolute',
-              bottom: '1rem',
-              left: '1rem',
-              right: '1rem',
-              display: 'flex',
-              flexDirection: 'column',
-              alignItems: 'center',
-            }}>
-              <span style={{ fontWeight: 'bold', marginBottom: '0.5rem', color: '#D59F0F' }}>
+            <div style={{ flex: '0 0 auto', position: 'relative' }}>
+              <button
+                onClick={() => {
+                  setSelectedFeature(null);
+                  setTempSelection(null);
+                }}
+                style={{
+                  position: 'absolute',
+                  top: 8,
+                  right: 12,
+                  background: 'transparent',
+                  border: 'none',
+                  fontSize: '2rem',
+                  cursor: 'pointer',
+                  color: 'black',
+                }}
+              >
+                ×
+              </button>
+
+              <h3
+                style={{
+                  margin: '2.5rem 0 1rem 0',
+                  fontSize: '1.25rem',
+                  fontWeight: 'bold',
+                  color: '#D59F0F',
+                  textAlign: 'center',
+                }}
+              >
+                {selectedFeature.properties.name}
+              </h3>
+            </div>
+
+            <div
+              style={{
+                flex: '1 1 auto',
+                overflowY: 'auto',
+              }}
+            >
+              {selectedFeature.properties.photo && (
+                <img
+                  src={selectedFeature.properties.photo}
+                  alt={selectedFeature.properties.name}
+                  style={{
+                    width: '100%',
+                    height: '120px',
+                    objectFit: 'cover',
+                    borderRadius: '8px',
+                    border: '2px solid #D59F0F',
+                    cursor: 'pointer',
+                  }}
+                  onClick={() => setIsImageOpen(true)}
+                />
+              )}
+
+              {selectedFeature.properties.description && (
+                <p
+                  style={{
+                    margin: '0.75rem 0 1rem 0',
+                    padding: '0 0.5rem',
+                    fontSize: '0.95rem',
+                    lineHeight: '1.3',
+                    color: '#002B7A',
+                  }}
+                >
+                  {selectedFeature.properties.description}
+                </p>
+              )}
+            </div>
+
+      
+            <div
+              style={{
+                flex: '0 0 auto',
+                marginTop: 'auto',
+                paddingTop: '0.5rem',
+                borderTop: '1px solid #ddd',
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+              }}
+            >
+              <span
+                style={{
+                  fontWeight: 'bold',
+                  marginBottom: '0.5rem',
+                  color: '#D59F0F',
+                }}
+              >
                 Rutas de PumaBus:
               </span>
-              <div style={{
-                display: 'flex',
-                flexWrap: 'wrap',
-                gap: '0.5rem',
-                justifyContent: 'center',
-              }}>
-                {Array.isArray(selectedFeature.properties.routes) && selectedFeature.properties.routes.length > 0 ? (
+
+              <div
+                style={{
+                  display: 'flex',
+                  flexWrap: 'wrap',
+                  gap: '0.5rem',
+                  justifyContent: 'center',
+                  paddingBottom: '0.5rem',
+                }}
+              >
+                {Array.isArray(selectedFeature.properties.routes) &&
+                selectedFeature.properties.routes.length > 0 ? (
                   selectedFeature.properties.routes.map((r) => (
                     <span
                       key={r}
@@ -701,7 +760,7 @@ export default function Map() {
                         alignItems: 'center',
                         justifyContent: 'center',
                         borderRadius: '4px',
-                        boxShadow: '0 1px 3px rgba(0,0,0,0.2)'
+                        boxShadow: '0 1px 3px rgba(0,0,0,0.2)',
                       }}
                     >
                       {r}
@@ -714,8 +773,6 @@ export default function Map() {
                 )}
               </div>
             </div>
-            
-
           </>
         ) : null}
       </div>
