@@ -386,15 +386,13 @@ export default function Map() {
     if (hrs > 0) {
       return `${hrs}h ${mins} min.`;
     }
-    return `${mins}m`;
+    return `${mins} min.`;
   };
 
   return (
     <>
-  
       <div ref={mapContainer} style={{ position: 'absolute', top: 0, bottom: 0, width: '100%' }} />
 
-      
       <div style={{ position: 'relative', zIndex: 1000, display: 'flex', justifyContent: 'space-around', padding: '1em' }}>
         <div style={{ position: 'relative', display: 'flex' }}>
           <SearchBox
@@ -451,13 +449,12 @@ export default function Map() {
           <p style={{ color: '#002B7A', fontWeight:'500' }}>
             <strong style={{ color: '#D59F0F' }}>Origen:</strong> {origin?.name || '—'}
           </p>
-          <p style={{ color: '#002B7A', fontWeight:'500'}}>
+          <p style={{ color: '#002B7A', fontWeight:'500' }}>
             <strong style={{ color: '#D59F0F' }}>Destino:</strong> {destination?.name || '—'}
           </p>
         </div>
       )}
 
-      
       <div style={{
         position: 'fixed',
         bottom: '3%',
@@ -553,7 +550,6 @@ export default function Map() {
         )}
       </div>
 
-
       <div
         style={{
           position: 'fixed',
@@ -611,7 +607,14 @@ export default function Map() {
             }}>
               Ruta óptima
             </h3>
-            <ul style={{ listStyle: 'none', margin: 0, padding: 0 }}>
+
+            <ul style={{
+              listStyle: 'none',
+              margin: 0,
+              padding: 0,
+              flex: '1 1 auto',
+              overflowY: 'auto'
+            }}>
               {routeSteps.map((step, idx) => {
                 const key           = step.estacion;
                 const nombreLegible = estacionesNames[key] || key;
@@ -713,7 +716,6 @@ export default function Map() {
               )}
             </div>
 
-      
             <div
               style={{
                 flex: '0 0 auto',
