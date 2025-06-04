@@ -177,20 +177,74 @@ export default function Map() {
     if (!waypoints || waypoints.length < 2) {
       throw new Error("Se requieren al menos 2 puntos para calcular la ruta");
     }
-    const coordsString = waypoints.map(c => c.join(",")).join(";");
-    const url =
-      `https://api.mapbox.com/directions/v5/mapbox/driving/${coordsString}` +
-      `?geometries=geojson&overview=full&access_token=${accessToken}`;
 
-    const res = await fetch(url);
-    if (!res.ok) {
-      throw new Error("Error al obtener geometría de Mapbox Directions");
+    const MAX_COORDS = 25;
+    const chunks = [];
+
+    if (waypoints.length > MAX_COORDS) {
+      for (let i = 0; i < waypoints.length; i += (MAX_COORDS - 1)) {
+        const slice = waypoints.slice(i, i + MAX_COORDS);
+        chunks.push(slice);
+        if (i + MAX_COORDS >= waypoints.length) break;
+      }
+    } else {
+      chunks.push(waypoints);
     }
-    const json = await res.json();
-    if (!json.routes || json.routes.length === 0) {
-      throw new Error("Mapbox Directions no devolvió rutas");
+
+    async function fetchChunk(chunk) {
+      const coordsString = chunk.map(c => c.join(",")).join(";");
+      const url =
+        `https://api.mapbox.com/directions/v5/mapbox/driving/${coordsString}` +
+        `?geometries=geojson&overview=full&access_token=${accessToken}`;
+
+      const res = await fetch(url);
+      if (!res.ok) {
+        const textoError = await res.text();
+        console.error("Error en la petición a Directions API:", textoError);
+        throw new Error("Error al obtener geometría de Mapbox Directions");
+      }
+      const json = await res.json();
+      if (!json.routes || json.routes.length === 0) {
+        throw new Error("Mapbox Directions no devolvió rutas");
+      }
+      const route = json.routes[0];
+      return {
+        coords: route.geometry.coordinates,
+        distance: route.distance,
+        duration: route.duration
+      };
     }
-    return json.routes[0]; 
+
+    if (chunks.length === 1) {
+      const { coords, distance, duration } = await fetchChunk(chunks[0]);
+      return {
+        geometry: { type: "LineString", coordinates: coords },
+        totalDistance: distance,
+        totalDuration: duration
+      };
+    }
+
+    let allCoords = [];
+    let sumaDistancia = 0;
+    let sumaDuracion = 0;
+
+    for (let i = 0; i < chunks.length; i++) {
+      const { coords, distance, duration } = await fetchChunk(chunks[i]);
+      sumaDistancia += distance;
+      sumaDuracion += duration;
+
+      if (i === 0) {
+        allCoords = coords.slice();
+      } else {
+        allCoords.push(...coords.slice(1));
+      }
+    }
+
+    return {
+      geometry: { type: "LineString", coordinates: allCoords },
+      totalDistance: sumaDistancia,
+      totalDuration: sumaDuracion
+    };
   }
 
   const finalizeRoute = () => {
@@ -242,10 +296,10 @@ export default function Map() {
         setRouteSteps(data.ruta);
         const coordsWaypoints = data.ruta.map(step => estacionesCoords[step.estacion]);
         try {
-          const routeObj = await fetchRouteGeometry(coordsWaypoints);
-          setRouteGeometry(routeObj.geometry);
-          setRouteDistance(routeObj.distance);   // en metros
-          setRouteDuration(routeObj.duration);   // en segundos
+          const { geometry, totalDistance, totalDuration } = await fetchRouteGeometry(coordsWaypoints);
+          setRouteGeometry(geometry);
+          setRouteDistance(totalDistance);
+          setRouteDuration(totalDuration);
         } catch (err) {
           console.error(err);
           alert(err.message);
