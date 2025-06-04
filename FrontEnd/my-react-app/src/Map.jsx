@@ -763,6 +763,8 @@ export default function Map() {
                     fontSize: '0.95rem',
                     lineHeight: '1.3',
                     color: '#002B7A',
+                    textAlign:'justify',
+                    fontWeight:'500'
                   }}
                 >
                   {selectedFeature.properties.description}
