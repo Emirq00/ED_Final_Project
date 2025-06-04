@@ -4846,10 +4846,12 @@ NLOHMANN_JSON_NAMESPACE_END
 // #include <nlohmann/detail/value_t.hpp>
 
 
-// include after macro_scope.hpp
+
+//include after macro_scope.hpp
 #ifdef JSON_HAS_CPP_17
     #include <optional> // optional
 #endif
+
 
 #if JSON_HAS_FILESYSTEM || JSON_HAS_EXPERIMENTAL_FILESYSTEM
     #include <string_view> // u8string_view

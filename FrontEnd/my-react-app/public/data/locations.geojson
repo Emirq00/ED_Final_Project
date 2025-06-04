@@ -8,7 +8,7 @@
                 "name": "Base Metro Universidad",
                 "key": "base_metro_universidad",
                 "photo": "/Imagenes/base_metro_universidad.jpg",
-                "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tincidunt  nulla id nisi convallis, vitae rutrum dolor maximus. Aenean viverra  suscipit semper. Fusce vel posuere dui. Duis commodo justo ante, non  consequat massa fringilla iaculis. Ut molestie vestibulum ornare...",
+                "description": "Aquí se se encuentran varias rutas del pumabus, es muy buen lugar para moverte a otros lados de C.U. Además, en la salida se encuentra la estación del metro C.U. lo que hace de esta base un punto importante en la conexión universitaria.",
                 "routes": [1, 2, 3, 4, 5]
             },
             "geometry": {
@@ -23,7 +23,7 @@
                 "name": "CENDI",
                 "key": "cendi",
                 "photo": "/Imagenes/CENDI.png",
-                "description": "",
+                "description": "Esta parada se encuentra cerca del Centro de Desarrollo Infantil, en este lugar infantes de 36 meses hasta 6 años pueden tomar clases. Además, cerca también se encuentra la DGAE (Dirección General de Administración Escolar).",
                 "routes": [1, 5]
             },
             "geometry": {
@@ -38,7 +38,7 @@
                 "name": "Psquiatría y Salud Mental",
                 "key": "psiquiatria_y_salud_mental",
                 "photo": "/Imagenes/psiquiatria_y_salud_mental.jpg",
-                "description": "",
+                "description": "Esta estación del pumabus se encuentra frente al departamento de Psiquiatría y Salud Mental de la Facultad de Medicina. Además, se encuentra cerca de la salida de Cerro del Agua y Copilco.",
                 "routes": [1, 5]
             },
             "geometry": {
@@ -53,7 +53,7 @@
                 "name": "Facultad de Química",
                 "key": "facultad_de_quimica",
                 "photo": "/Imagenes/facultad_de_quimica.jpeg",
-                "description": "",
+                "description": "Parada de la Facultad de Química, frente al estacionamiento y algunos puestos de comidas. Se encuentra frente a la parada del IIMAS.",
                 "routes": [1, 7, 12]
             },
             "geometry": {
@@ -68,7 +68,7 @@
                 "name": "ENALLT Edificios A y B",
                 "key": "enallt_edif_a_y_b",
                 "photo": "/Imagenes/enallt_edif_a_y_b.jpeg",
-                "description": "",
+                "description": "Esta parada se encuentra frente a la Escuela Nacional de Lenguas, Lingüística y Traducción. Además, cerca de la misma se encuentra la entrada al edificio A de la Facultad de Ingeniería, Las Islas y el Anexo de Arquitectura.",
                 "routes": [1, 7, 12]
             },
             "geometry": {
@@ -83,7 +83,7 @@
                 "name": "Facultad de Ingeniería",
                 "key": "facultad_de_ingenieria",
                 "photo": "/Imagenes/facultad_de_ingenieria.jpeg",
-                "description": "",
+                "description": "Frente a esta parada se encuentra la entrada al edificio B de la Facultad de Igneniería. Cerca también se encuentra la Alberca Olímpica.",
                 "routes": [1, 7, 12]
             },
             "geometry": {
@@ -98,7 +98,7 @@
                 "name": "Facultad de Arquitectura",
                 "key": "facultad_de_arquitectura",
                 "photo": "/Imagenes/facultad_de_arquitectura.jpeg",
-                "description": "",
+                "description": "Aquí se encuentra la entrada a la Facultad de Arquitectura, enfrente se encuentra la Dirección General de Atención a la Salud.",
                 "routes": [1, 7, 12]
             },
             "geometry": {
@@ -113,7 +113,7 @@
                 "name": "Rectoría",
                 "key": "rectoria",
                 "photo": "/Imagenes/rectoria.jpeg",
-                "description": "",
+                "description": "Parada que se encuentra frente a Rectoría, cerca también se encuentra la Biblioteca Central y el Estadio Universitario.",
                 "routes": [1, 9]
             },
             "geometry": {
@@ -128,7 +128,7 @@
                 "name": "Psicología",
                 "key": "psicologia",
                 "photo": "/Imagenes/psicologia.jpeg",
-                "description": "",
+                "description": "Esta parada se encuentra frente a la entrada de la Facultad de Psicología, el Jardín del Edén y la Biblioteca Central. Caminando un poco también se puede llegar a la parada del metrobús Dr. Gálvez.",
                 "routes": [1, 5, 7, 9, 12]
             },
             "geometry": {
@@ -143,7 +143,7 @@
                 "name": "Facultad de Filosofía",
                 "key": "facultad_de_filosofia",
                 "photo": "/Imagenes/facultad_de_filosofia.jpeg",
-                "description": "",
+                "description": "Parada frente a la Facultad de Filosofía. Cerca de Biblioteca Central y frente al Centro de Enseñanza Para Extranjeros.",
                 "routes": [1, 5, 7, 9, 12, 13]
             },
             "geometry": {
