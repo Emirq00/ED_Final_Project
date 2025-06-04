@@ -1,14 +1,15 @@
 .Container{
     height: 65vh;
-    width: 70vw;
+    width: 60vw;
     background-color: white;
     align-items: center;
     justify-content: center;
     z-index: 1000;   
     position: fixed;
-    right: 15%;
-    top:10%;
+    right: 20%;
+    top:15%;
     border-radius: 10%;
+    padding: 1.5rem;
     
 }
 
@@ -30,13 +31,14 @@
     position: relative;
     width:clamp(100px, 15vw, 600px);
     font-size: clamp(15px, 2.5vw, 30px);
-    height: clamp(50px, 7.5vw, 300px);
+    height: clamp(45px, 6vw, 270px);
     border-radius: 15%;
     background-color: #002B7A;
-    font-family: 'Anonymous Pro';
+    /* font-family: 'Anonymous Pro'; */
     font-size: clamp(1.5rem, 3vw, 2rem);
     color: #D59F0F;
-    font-style: bold;
+    /* font-style: bold; */
+    font-weight: bold;
 }
 
 .Modal-Title{
