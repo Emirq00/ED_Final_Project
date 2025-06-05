@@ -683,7 +683,7 @@
                 "name": "Investigaciones Jurídicas",
                 "key": "investigaciones_juridicas",
                 "photo": "/Imagenes/investigaciones_juridicas.jpg",
-                "description": "",
+                "description": "Estación del pumabus ubicada a un lado del Instituto de Investigaciones Jurídicas, que se encarga de la investigación y difusión del derecho, cerca del espacio escultórico",
                 "routes": [3, 10]
             },
             "geometry": {
@@ -698,7 +698,7 @@
                 "name": "T.V. UNAM",
                 "key": "tv_unam",
                 "photo": "/Imagenes/tv_unam.jpg",
-                "description": "",
+                "description": "Parada del pumabus que se ubica en la entrada de T.V. UNAM, encargada de gestionar todo aquello relacionado con la televisión universitaria.",
                 "routes": [3, 10]
             },
             "geometry": {
@@ -713,7 +713,7 @@
                 "name": "CUEC",
                 "key": "cuec",
                 "photo": "/Imagenes/CUEC.jpg",
-                "description": "",
+                "description": "Estación ubicada en la entrada del Centro Universitario de Estudios Cinematográficos (CUEC), cerca de la estación de T.V. UNAM.",
                 "routes": [3, 10]
             },
             "geometry": {
@@ -728,7 +728,7 @@
                 "name": "DGSA",
                 "key": "dgsa",
                 "photo": "/Imagenes/DGSA.jpg",
-                "description": "",
+                "description": "Estación ubicada en la entrada de la Dirección General de Servicios Administrativos (DGSA), a un lado de Tienda UNAM.",     
                 "routes": [3, 10]
             },
             "geometry": {
@@ -743,7 +743,7 @@
                 "name": "Tienda UNAM",
                 "key": "tienda_unam",
                 "photo": "/Imagenes/tienda_unam.jpg",
-                "description": "",
+                "description": "Estación del pumabus ubicada junto a Tienda UNAM, cercad el metro Universdidad.",
                 "routes": [3]
             },
             "geometry": {
@@ -758,7 +758,7 @@
                 "name": "Estadio de Prácticas",
                 "key": "estadio_de_practicas",
                 "photo": "/Imagenes/estadio_de_practicas.jpg",
-                "description": "",
+                "description": "Estación ubicada junto al estadio de prácticas 'Humberto Tapatío Méndez'.",
                 "routes": [4, 6, 8, 9, 11, 13]
             },
             "geometry": {
@@ -773,7 +773,7 @@
                 "name": "Campos de Fútbol I",
                 "key": "campos_de_futbol_i",
                 "photo": "/Imagenes/campos_de_futbol_i.jpg",
-                "description": "",
+                "description": "Estación que se encuentra junto a los campos de fútbol de la zona deportiva de la Ciudad Universitaria.",
                 "routes": [4, 6, 10]
             },
             "geometry": {
@@ -788,7 +788,7 @@
                 "name": "Jardin Botánico",
                 "key": "jardin_botanico",
                 "photo": "/Imagenes/jardin_botanico.jpg",
-                "description": "",
+                "description": "Estación del pumabus ubicadda frente al Jardín Botánico. Este jardín es un espacio natural que alberga una gran variedad de plantas y árboles, ideal para pasear y disfrutar de la naturaleza.",
                 "routes": [4, 6, 10, 11]
             },
             "geometry": {
@@ -803,7 +803,7 @@
                 "name": "Campos de Fútbol II",
                 "key": "campos_de_futbol_ii",
                 "photo": "/Imagenes/campos_de_futbol_ii.jpg",
-                "description": "",
+                "description": "Parada ubicada a un lado de los campos de fútbol ubicados junto al Jardín Botánico.",
                 "routes": [4, 6, 10, 11]
             },
             "geometry": {
@@ -818,7 +818,7 @@
                 "name": "Medicina",
                 "key": "medicina",
                 "photo": "/Imagenes/Medicina.jpg",
-                "description": "",
+                "description": "Estación ubicada a un lado de Copilco y de la Facultad de Medicina.",
                 "routes": [5]
             },
             "geometry": {
@@ -833,7 +833,7 @@
                 "name": "Odontología",
                 "key": "odontologia",
                 "photo": "/Imagenes/Odontologia.jpg",
-                "description": "",
+                "description": "Estación ubicada en la entrada de la Facultad de Odontología a un lado de Copilco y de la Facultad de Medicina.",
                 "routes": [5]
             },
             "geometry": {
@@ -848,7 +848,7 @@
                 "name": "Economía",
                 "key": "economia",
                 "photo": "/Imagenes/Economia.jpg",
-                "description": "",
+                "description": "Parada del pumabus ubicada en la entrada de la Facultad de Economía, a un lado de Copilco y de 'Las Islas'",
                 "routes": [5]
             },
             "geometry": {
@@ -863,7 +863,7 @@
                 "name": "Av. Universidad",
                 "key": "av_universidad",
                 "photo": "/Imagenes/av_universidad.jpg",
-                "description": "",
+                "description": "Parada ubicada en el acceso a la Av. Unversidad, entre la facultad de Economía y Derecho.",
                 "routes": [5]
             },
             "geometry": {
@@ -878,7 +878,7 @@
                 "name": "Derecho",
                 "key": "derecho",
                 "photo": "/Imagenes/Derecho.jpg",
-                "description": "",
+                "description": "Parada localizada en la entrada de la Facultad de Derecho, cerca de la entrada de Copilco.",
                 "routes": [5]
             },
             "geometry": {
@@ -893,7 +893,7 @@
                 "name": "Filosofía",
                 "key": "filosofia",
                 "photo": "/Imagenes/Filosofia.jpg",
-                "description": "",
+                "description": "Estación que se encuentra en la entrada de la Facultad de Filosofía y Letras, entre Psicología y Derecho.",
                 "routes": [5]
             },
             "geometry": {
@@ -908,7 +908,7 @@
                 "name": "Facultad de Psicología",
                 "key": "facultad_de_psicologia",
                 "photo": "/Imagenes/facultad_de_psicologia.jpg",
-                "description": "",
+                "description": "Parada que se encuentra en la Facultad de Psicología, caminando un poco se llega al acceso a Insurgentes Norte.",
                 "routes": [5]
             },
             "geometry": {
@@ -923,7 +923,7 @@
                 "name": "Base Estadio Oímpico",
                 "key": "base_estadio_olimpico",
                 "photo": "/Imagenes/base_estadio_olimpico.png",
-                "description": "",
+                "description": "Estación que se encuentra en la Base del Estadio Olímpico.",
                 "routes": [6, 7, 8, 12]
             },
             "geometry": {
@@ -938,7 +938,7 @@
                 "name": "Pumitas I",
                 "key": "pumitas_i",
                 "photo": "/Imagenes/pumitas_i.jpg",
-                "description": "",
+                "description": "stación que se encuentra a un lado de la zona deportiva de la Ciudad Universitaria.",
                 "routes": [6]
             },
             "geometry": {
@@ -953,7 +953,7 @@
                 "name": "Pista de Calentamiento I",
                 "key": "pista_de_calentamiento_i",
                 "photo": "/Imagenes/pista_de_calentamiento_i.jpg",
-                "description": "",
+                "description": "Estación ubicada a un lado de la zona deportiva de la ciudad universitaria, cerca de la pista de calentamiento.",
                 "routes": [6]
             },
             "geometry": {
@@ -968,7 +968,7 @@
                 "name": "Pista de Calentamiento II",
                 "key": "pista_de_calentamiento_ii",
                 "photo": "/Imagenes/pista_de_calentamiento_ii.jpg",
-                "description": "",
+                "description": "Estación ubicada a un lado de la zona deportiva de la ciudad universitaria, cerca de la pista de calentamiento."   ,
                 "routes": [6, 11]
             },
             "geometry": {
@@ -983,7 +983,7 @@
                 "name": "Pumitas II",
                 "key": "pumitas_ii",
                 "photo": "/Imagenes/pumitas_ii.jpg",
-                "description": "",
+                "description": "Estación que se encuentra a un lado de la zona deportiva de la Ciudad Universitaria.",
                 "routes": [6, 11]
             },
             "geometry": {
@@ -998,7 +998,7 @@
                 "name": "Investigaciones Biomédicas",
                 "key": "investigaciones_biomedicas",
                 "photo": "/Imagenes/investigaciones_biomedicas.jpg",
-                "description": "",
+                "description": "Parada ubicada en la entrada del Instituto de Investigaciones Biomédicas.",
                 "routes": [6, 10]
             },
             "geometry": {
@@ -1013,7 +1013,7 @@
                 "name": "MetroBús C.U. 2",
                 "key": "base_metrobus_cu_ii",
                 "photo": "/Imagenes/base_metrobus_cu_ii.jpg",
-                "description": "",
+                "description": "Estación ubicada en la entrada al metrobus Ciudad Universitaria.",
                 "routes": [6, 10, 13]
             },
             "geometry": {
@@ -1028,7 +1028,7 @@
                 "name": "Facultad de Ciencias Profesores",
                 "key": "facultad_de_ciencias_profesores",
                 "photo": "/Imagenes/facultad_de_ciencias_profesores.jpg",
-                "description": "",
+                "description": "Parada que se encuentra frente al estacionamiento para profesores en la Facultad de Ciencias.",
                 "routes": [6]
             },
             "geometry": {
@@ -1043,7 +1043,7 @@
                 "name": "Investigación Científica",
                 "key": "investigacion_cientifica",
                 "photo": "/Imagenes/investigacion_cientifica.jpg",
-                "description": "",
+                "description": "Estación que se encuentra a un lado de la Facultad de Ciencias, aquí se enceuntran diferentes Institutos relacionados a la investigación científicas.",
                 "routes": [6]
             },
             "geometry": {
@@ -1058,7 +1058,7 @@
                 "name": "Ciencias del Mar",
                 "key": "ciencias_del_mar",
                 "photo": "/Imagenes/ciencias_del_mar.jpg",
-                "description": "",
+                "description": "Estación ubiaca en el Instituto de Ciencias del Mar y Limnología.",
                 "routes": [6]
             },
             "geometry": {
@@ -1073,7 +1073,7 @@
                 "name": "Invernadero",
                 "key": "invernadero",
                 "photo": "/Imagenes/Invernadero.jpg",
-                "description": "",
+                "description": "Estación ubicada en medio del Anexo de Ingeniería y del Instituto de Investigaciones Biomédicas.",
                 "routes": [6, 8, 9]
             },
             "geometry": {
@@ -1088,7 +1088,7 @@
                 "name": "Anexo de Ingeniería",
                 "key": "anexo_de_ingenieria",
                 "photo": "/Imagenes/anexo_de_ingenieria.jpg",
-                "description": "",
+                "description": "Parada localizada a un lado del Anexo de Ingeniería.",
                 "routes": [6, 8, 9]
             },
             "geometry": {
@@ -1103,7 +1103,7 @@
                 "name": "Camino Verde",
                 "key": "camino_verde",
                 "photo": "/Imagenes/camino_verde.jpg",
-                "description": "",
+                "description": "Estación ubicada frene a la entrada del Anexo de Ingeniería, a un lado se encuentra la Facultad de Ciencias.",
                 "routes": [6, 8, 9, 13]
             },
             "geometry": {
@@ -1118,7 +1118,7 @@
                 "name": "MUCA",
                 "key": "muca",
                 "photo": "/Imagenes/MUCA.jpg",
-                "description": "",
+                "description": "Para del pumabus ubicada a un lado del Museo Universitario de Ciencias y Arte (MUCA), a un lado de la Facultad de Arquitectura.",
                 "routes": [6, 8, 9, 11]
             },
             "geometry": {
@@ -1133,7 +1133,7 @@
                 "name": "Estacionamiento 8",
                 "key": "estacionamiento_8",
                 "photo": "/Imagenes/estacionamiento_8.jpg",
-                "description": "",
+                "description": "Parada del pumabus ubicada en la zona del estacionamiento 8 del Estadio Olímpico Universitario",
                 "routes": [6, 7, 8, 11, 12]
             },
             "geometry": {
@@ -1148,7 +1148,7 @@
                 "name": "Estacionamiento 7",
                 "key": "estacionamiento_7",
                 "photo": "/Imagenes/estacionamiento_7.jpg",
-                "description": "",
+                "description": "Parada del pumabus ubicada en la zona del estacionamiento 7 del Estadio Olímpico Universitario",
                 "routes": [6, 7, 8, 11, 12]
             },
             "geometry": {
@@ -1163,7 +1163,7 @@
                 "name": "Estacionamiento 6",
                 "key": "estacionamiento_6",
                 "photo": "/Imagenes/estacionamiento_6.jpg",
-                "description": "",
+                "description": "Parada del pumabus ubicada en la zona del estacionamiento 6 del Estadio Olímpico Universitario",
                 "routes": [6, 7, 8, 12]
             },
             "geometry": {
@@ -1178,7 +1178,7 @@
                 "name": "Estacionamiento 4",
                 "key": "estacionamiento_4",
                 "photo": "/Imagenes/estacionamiento_4.jpg",
-                "description": "",
+                "description": "Parada del pumabus ubicada en la zona del estacionamiento 4 del Estadio Olímpico Universitario",
                 "routes": [6, 7, 8, 12]
             },
             "geometry": {
@@ -1193,7 +1193,7 @@
                 "name": "Estacionamiento 3",
                 "key": "estacionamiento_3",
                 "photo": "/Imagenes/estacionamiento_3.jpg",
-                "description": "",
+                "description": "Parada del pumabus ubicada en la zona del estacionamiento 3 del Estadio Olímpico Universitario",
                 "routes": [6, 7, 8, 12]
             },
             "geometry": {
@@ -1208,7 +1208,7 @@
                 "name": "Estacionamiento 2",
                 "key": "estacionamiento_2",
                 "photo": "/Imagenes/estacionamiento_2.jpg",
-                "description": "",
+                "description": "Parada del pumabus ubicada en la zona del estacionamiento 2 del Estadio Olímpico Universitario",
                 "routes": [6, 7, 8, 12]
             },
             "geometry": {
@@ -1223,7 +1223,7 @@
                 "name": "Centro Médico",
                 "key": "centro_medico",
                 "photo": "/Imagenes/centro_medico.jpg",
-                "description": "",
+                "description": "Esta parada se encuenta en la Dirección General de Atención a la Salud, a un lado de la Facultad de Arquitectura.",
                 "routes": [8]
             },
             "geometry": {
@@ -1238,7 +1238,7 @@
                 "name": "Alberca",
                 "key": "alberca",
                 "photo": "/Imagenes/alberca.jpg",
-                "description": "",
+                "description": "Esta parada se encuentra frente a la alberca y gimnasio de Ciudad Universitaria, se encuentra a un lado de la Facultad de Arquitectura.",
                 "routes": [8]
             },
             "geometry": {
@@ -1253,7 +1253,7 @@
                 "name": "Ingeniería",
                 "key": "ingenieria",
                 "photo": "/Imagenes/Ingenieria.jpg",
-                "description": "",
+                "description": "Estación que se encuentra a un lado de la facultad de Ingeniería",
                 "routes": [8]
             },
             "geometry": {
@@ -1268,7 +1268,7 @@
                 "name": "Frontones",
                 "key": "frontones",
                 "photo": "/Imagenes/Frontones.jpg",
-                "description": "",
+                "description": "Estación ubicada al lado de la Torre de Ingeniería, al lado de la facultad de Química y del ENALLT.",
                 "routes": [8]
             },
             "geometry": {
@@ -1283,7 +1283,7 @@
                 "name": "IIMAS",
                 "key": "iimas",
                 "photo": "/Imagenes/IIMAS.jpg",
-                "description": "",
+                "description": "Parada que se encuentra frente al IIMAS (Instituto de Investigaciones en Matemáticas Avanzadas y Sistemas), también ubicada a un lado de la Facultad de Química.",
                 "routes": [8]
             },
             "geometry": {
@@ -1298,7 +1298,7 @@
                 "name": "Relaciones Laborales",
                 "key": "relaciones_laborales",
                 "photo": "/Imagenes/relaciones_laborales.jpg",
-                "description": "",
+                "description": "Parada ubicada en el centro de Relaciones Laborales, a un lado del estadio Olímpico Universitario y del edificio C del ENALLT.",
                 "routes": [11, 12]
             },
             "geometry": {
@@ -1313,7 +1313,7 @@
                 "name": "Dirección General de Obras / Proveeduría",
                 "key": "direccion_general_de_obras/proveeduria",
                 "photo": "/Imagenes/direccion_general_de_obras.jpg",
-                "description": "",
+                "description": "Estación ubicada en la Dirección General de Obras, a un lado del Estadio Olímpico Universitario.",  
                 "routes": [11, 12]
             },
             "geometry": {
@@ -1328,7 +1328,7 @@
                 "name": "AAPAUNAM",
                 "key": "aapaunam",
                 "photo": "/Imagenes/AAPAUNAM.jpg",
-                "description": "",
+                "description": "Estación que se encuentra a un lado de AAPAUNAM, caminando un poco se encuentra el edificio C del ENALLT.",
                 "routes": [11, 12]
             },
             "geometry": {
@@ -1343,7 +1343,7 @@
                 "name": "Posgrado de Filosofía",
                 "key": "posgrado_de_filosofia",
                 "photo": "/Imagenes/posgrado_de_filosofia.jpg",
-                "description": "",
+                "description": "Esta parada se encuentra frente al Posgrado de Filosofía.",
                 "routes": [11]
             },
             "geometry": {
@@ -1358,7 +1358,7 @@
                 "name": "Anexo de Filosofía",
                 "key": "anexo_de_filosofia",
                 "photo": "/Imagenes/posgrado_de_filosofia.jpg",
-                "description": "",
+                "description": "Parada que se encuentra frente al Anexo de Filosofía.",
                 "routes": [11]
             },
             "geometry": {
