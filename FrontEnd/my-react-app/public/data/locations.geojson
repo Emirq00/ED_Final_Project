@@ -158,7 +158,7 @@
                 "name": "Facultad de Derecho",
                 "key": "facultad_de_derecho",
                 "photo": "/Imagenes/facultad_de_derecho.jpeg",
-                "description": "",
+                "description": "Esta parada se encuentra frente a la entrada de la Facultad de Derecho. Enfrente se encuentra el estacionamiento de derecho y la salida a la gasolinera Pemex.",
                 "routes": [1, 5, 7, 9, 12, 13]
             },
             "geometry": {
@@ -173,7 +173,7 @@
                 "name": "Facultad de Economía",
                 "key": "facultad_de_economia",
                 "photo": "/Imagenes/facultad_de_economia.jpeg",
-                "description": "",
+                "description": "Esta estación se encuentra cerca de la entrada de la Facultad de Economía. Cerca se encuentra la salida peatonal que lleva al Walmart de Copilco.",
                 "routes": [1, 5, 7, 9, 12]
             },
             "geometry": {
@@ -188,7 +188,7 @@
                 "name": "Facultad de Odontología",
                 "key": "facultad_de_odontologia",
                 "photo": "/Imagenes/facultad_de_odontologia.jpeg",
-                "description": "",
+                "description": "Parada del Pumabús cerca de la entrada de la Facultad de Odontología. Se encuentra cerca de la Muela y frente a la salida peatonal de Odontología. Parada muy concurrida por su cercanía al metro Copilco.",
                 "routes": [1, 5, 7, 9, 12]
             },
             "geometry": {
@@ -203,7 +203,7 @@
                 "name": "Facultad de Medicina",
                 "key": "facultad_de_medicina",
                 "photo": "/Imagenes/facultad_de_medicina.jpeg",
-                "description": "",
+                "description": "Esta parada se encuentra frente a la entrada del estacionamiento de la Facultad de Medicina. Cerca de la salida hacía Cerro del Agua y Copilco. Cerca de Psiquiatría y Salud Mental.",
                 "routes": [1, 5, 7, 9, 12]
             },
             "geometry": {
@@ -218,7 +218,7 @@
                 "name": "Facultad de Veterinaria",
                 "key": "facultad_de_veterinaria",
                 "photo": "/Imagenes/facultad_de_veterinaria.jpg",
-                "description": "",
+                "description": "Aquí se encuentra la entrada a la Facultad de Veterinaria.",
                 "routes": [1, 5]
             },
             "geometry": {
@@ -233,7 +233,7 @@
                 "name": "Instituto de GeoFísica",
                 "key": "instituto_de_geofisica",
                 "photo": "/Imagenes/instituto_de_geofisica.jpg",
-                "description": "",
+                "description": "Parada del Pumabús cerca de la entrada del Instituto de Geología.",
                 "routes": [1, 5]
             },
             "geometry": {
@@ -248,7 +248,7 @@
                 "name": "Química Conjunto D y E",
                 "key": "quimica_conjunto_d_y_e",
                 "photo": "/Imagenes/quimica_conjunto_d_y_e.jpg",
-                "description": "",
+                "description": "Aquí se encuentra el Anexo de la Facultad de Química.",
                 "routes": [1, 2, 3, 4, 5]
             },
             "geometry": {
@@ -263,7 +263,7 @@
                 "name": "Facultad de Ciencias Alumnos",
                 "key": "facultad_de_ciencias_alumnos",
                 "photo": "/Imagenes/facultad_de_ciencias_alumnos.jpg",
-                "description": "",
+                "description": "Esta parada se encuentra frente al estacionamiento de estudiantes de la Facultad de Ciencias.",
                 "routes": [2, 4]
             },
             "geometry": {
@@ -278,7 +278,7 @@
                 "name": "Facultad de Ciencias Camino Verde",
                 "key": "facultad_de_ciencias_camino_verde",
                 "photo": "/Imagenes/facultad_de_ciencias_camino_verde.jpg",
-                "description": "",
+                "description": "Estación cerca de la Facultad de Ciencias. El Camino Verde pasa cerca de aquí.",
                 "routes": [2, 4]
             },
             "geometry": {
@@ -293,7 +293,7 @@
                 "name": "Facultad de Contaduría y Administración",
                 "key": "facultad_de_contaduria_y_administracion",
                 "photo": "/Imagenes/facultad_de_contaduria_y_administracion.jpg",
-                "description": "",
+                "description": "Parada frente a la Facultad de Contaduría y Administración.",
                 "routes": [2, 4, 6, 8, 9]
             },
             "geometry": {
@@ -308,7 +308,7 @@
                 "name": "Escuela de Trabajo Social",
                 "key": "escuela_de_trabajo_social",
                 "photo": "/Imagenes/escuela_de_trabajo_social.jpg",
-                "description": "",
+                "description": "Estación que se encuentra frenta a la Escuela de Trabajo Social.",
                 "routes": [2, 4, 6, 8, 9]
             },
             "geometry": {
@@ -323,7 +323,7 @@
                 "name": "Base MetroBus C.U.",
                 "key": "base_metrobus_cu",
                 "photo": "/Imagenes/base_metrobus_cu.jpg",
-                "description": "",
+                "description": "Esta parada se encuentra frente a la estación del Metrobús C.U. Es una estación muy visitada. Aquí los conductores realizan sus cambios.",
                 "routes": [2, 6, 8, 9, 11]
             },
             "geometry": {
@@ -338,7 +338,7 @@
                 "name": "MetroBus C.U.",
                 "key": "metrobus_cu",
                 "photo": "/Imagenes/metrobus_cu.jpg",
-                "description": "",
+                "description": "Parada que se encuentra inmediatamente bajando del espiral del Metrobús C.U.",
                 "routes": [2, 4, 6]
             },
             "geometry": {
@@ -353,7 +353,7 @@
                 "name": "Educación a Distancia",
                 "key": "educacion_a_distancia",
                 "photo": "/Imagenes/educacion_a_distancia.jpg",
-                "description": "",
+                "description": "Estación frente a la entrada de la Coordinación de Universidad Abierta y Educación a Distancia.",
                 "routes": [2, 4, 6]
             },
             "geometry": {
@@ -368,7 +368,7 @@
                 "name": "DGTIC",
                 "key": "dgtic",
                 "photo": "/Imagenes/dgtic.jpg",
-                "description": "",
+                "description": "Parada frente a la Dirección General de Cómputo y Tecnologías de Información y Comunicación.",
                 "routes": [2, 4, 6]
             },
             "geometry": {
@@ -383,7 +383,7 @@
                 "name": "Facultad de Ciencias",
                 "key": "facultad_de_ciencias",
                 "photo": "/Imagenes/facultad_de_ciencias.jpg",
-                "description": "",
+                "description": "Estación frente al estacionamiento de estudiantes de la Facultad de Ciencias. También se encuentra cerca del Instituto de Investigaciones Antropológicas.",
                 "routes": [2, 4]
             },
             "geometry": {
@@ -398,7 +398,7 @@
                 "name": "Tienda UNAM 2",
                 "key": "tienda_unam_ii",
                 "photo": "/Imagenes/tienda_unam_ii.jpg",
-                "description": "",
+                "description": "Parada frente a Tienda UNAM. Cerca también se encuentra la Facultad de Ciencias Políticas y Sociales y la Filmoteca UNAM.",
                 "routes": [3, 10]
             },
             "geometry": {
@@ -413,7 +413,7 @@
                 "name": "Facultad de Ciencias Políticas",
                 "key": "facultad_de_ciencias_politicas",
                 "photo": "/Imagenes/facultad_de_ciencias_politicas.jpg",
-                "description": "",
+                "description": "Estación frente a la Facultad de Ciencias Políticas y Sociales. Cerca se encuentra TV UNAM.",
                 "routes": [3, 10, 13]
             },
             "geometry": {
@@ -428,7 +428,7 @@
                 "name": "Investigaciones Jurídicas 2",
                 "key": "investigaciones_juridicas_ii",
                 "photo": "/Imagenes/investigaciones_juridicas_ii.jpg",
-                "description": "",
+                "description": "Estación frente al estacionamiento del Instituto de Investigaciones Jurídicas. En el mismo conjunto se encuentra la Coordinación de Humanidades de la UNAM.",
                 "routes": [3, 10, 13]
             },
             "geometry": {
@@ -443,7 +443,7 @@
                 "name": "Biblioteca Nacional 2",
                 "key": "biblioteca_nacional_ii",
                 "photo": "/Imagenes/biblioteca_nacional_ii.jpg",
-                "description": "",
+                "description": "Estación cerca de la Biblioteca y Hemeroteca Nacional. Cerca se encuentra la estación del Metrobús Centro Cultural Universitario.",
                 "routes": [3, 10, 13]
             },
             "geometry": {
@@ -458,7 +458,7 @@
                 "name": "Zona Cultural",
                 "key": "zona_cultural",
                 "photo": "/Imagenes/zona_cultural.jpg",
-                "description": "",
+                "description": "Estación del Pumabús frente al Centro Cultural Universitario. Cerca se encuentra el MUAC, las salas de cine de la UNAM, etc. Además se encuentra frente a la para del Metrobús Centro Cultural Universitario.",
                 "routes": [3, 10]
             },
             "geometry": {
@@ -473,7 +473,7 @@
                 "name": "Unidad de Posgrado",
                 "key": "unidad_de_posgrado",
                 "photo": "/Imagenes/unidad_de_posgrado.jpg",
-                "description": "",
+                "description": "Parada frente a la Unidad de Posgrado de la UNAM. Cerca se encuentra el Resguardo Vehicular de la UNAM.",
                 "routes": [3, 10, 13]
             },
             "geometry": {
@@ -488,7 +488,7 @@
                 "name": "Posgrado de Economía",
                 "key": "posgrado_de_economia",
                 "photo": "/Imagenes/posgrado_de_economia.jpg",
-                "description": "",
+                "description": "Estación del Pumabús que se encuentra frente a la División de Estudios de Posgrado de la Facultad de Economía.",
                 "routes": [3, 10]
             },
             "geometry": {
@@ -503,7 +503,7 @@
                 "name": "DGIRE",
                 "key": "dgire",
                 "photo": "/Imagenes/dgire.jpg",
-                "description": "",
+                "description": "Aquí se encuentra la Dirección General de Incorporación y Revalidación de Estudios. Cerca también se encuentra el Pabellón Nacional de la Biodiversidad.",
                 "routes": [3, 10]
             },
             "geometry": {
@@ -518,7 +518,7 @@
                 "name": "DGAPA",
                 "key": "dgapa",
                 "photo": "/Imagenes/dgapa.jpg",
-                "description": "",
+                "description": "Cerca de aquí se encuentra la Dirección General de Asuntos del Personal Académico. También podemos encontrar la Dirección General de Asuntos Jurídicos y la Defensoría de la UNAM.",
                 "routes": [3, 10]
             },
             "geometry": {
@@ -533,7 +533,7 @@
                 "name": "Archivo General",
                 "key": "archivo_general",
                 "photo": "/Imagenes/archivo_general.jpg",
-                "description": "",
+                "description": "Estación del pumabús frente al Archivo General de la UNAM. Cerca también de encuentra la Dirección General del Patrimonio Universitario.",
                 "routes": [3, 10]
             },
             "geometry": {
@@ -548,7 +548,7 @@
                 "name": "Avenida IMAN",
                 "key": "avenida_iman",
                 "photo": "/Imagenes/avenida_iman.jpg",
-                "description": "",
+                "description": "Parada cerca de la salida del campus hacia la Avenida del Imán. Cerca se encuentra el Local de Registro de Aspirantes de la UNAM.",
                 "routes": [3, 10]
             },
             "geometry": {
@@ -563,7 +563,7 @@
                 "name": "Investigaciones Filosóficas",
                 "key": "investigaciones_filosoficas",
                 "photo": "/Imagenes/investigaciones_filosoficas.jpg",
-                "description": "",
+                "description": "Estación del Pumabús frente al Instituto de Investigaciones Filosóficas. Complejo de la Coordinación de Humanidades.",
                 "routes": [3, 10]
             },
             "geometry": {
@@ -578,7 +578,7 @@
                 "name": "Investigaciones Filológicas",
                 "key": "investigaciones_filologicas",
                 "photo": "/Imagenes/investigaciones_filologicas.jpg",
-                "description": "",
+                "description": "Estación del Pumabús frente al Instituto de Investigaciones Filológicas. Complejo de la Coordinación de Humanidades.",
                 "routes": [3, 10]
             },
             "geometry": {
@@ -593,7 +593,7 @@
                 "name": "Coordinación de Humanidades",
                 "key": "coordinacion_de_humanidades",
                 "photo": "/Imagenes/coordinacion_de_humanidades.jpg",
-                "description": "",
+                "description": "Estación frente al Complejo de la Coordinación de Humanidades de la UNAM.",
                 "routes": [3, 10, 13]
             },
             "geometry": {
@@ -608,7 +608,7 @@
                 "name": "UNIVERSUM",
                 "key": "universum",
                 "photo": "/Imagenes/universum.jpg",
-                "description": "",
+                "description": "Parada del pumabús frente al museo de ciencias Universum.",
                 "routes": [3, 10]
             },
             "geometry": {
@@ -623,7 +623,7 @@
                 "name": "Teatro y Danza",
                 "key": "teatro_y_danza",
                 "photo": "/Imagenes/teatro_y_danza.jpg",
-                "description": "",
+                "description": "Estación cerca de los auditorios de teatro de la UNAM. A un lado se encuentra el Pabellón Nacional de la Biodiversidad.",
                 "routes": [3, 10]
             },
             "geometry": {
@@ -638,7 +638,7 @@
                 "name": "MUAC",
                 "key": "muac",
                 "photo": "/Imagenes/MUAC.jpg",
-                "description": "",
+                "description": "Estación del Museo Nacional de Arte Conteporáneo. Enfrente se encuentra el Metrobús Centro Cultural Universitario.",
                 "routes": [3, 10]
             },
             "geometry": {
@@ -653,7 +653,7 @@
                 "name": "Biblioteca Nacional",
                 "key": "biblioteca_nacional",
                 "photo": "/Imagenes/biblioteca_nacional.jpg",
-                "description": "",
+                "description": "Estación frente a la Biblioteca y Hemeroteca Nacional.",
                 "routes": [3, 10]
             },
             "geometry": {
@@ -668,7 +668,7 @@
                 "name": "Espacio Escultórico",
                 "key": "espacio_escultorico",
                 "photo": "/Imagenes/espacio_escultorico.jpg",
-                "description": "",
+                "description": "Parada frente al Espacio Escultórico.",
                 "routes": [3, 10]
             },
             "geometry": {
